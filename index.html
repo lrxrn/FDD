@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APUFit Club - Health & Wellness at Asia Pacific University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏋️‍♂️ APUFit Club</div>
+        <p>Health & Wellness at Asia Pacific University</p>
+    </header>
+
+    <nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li style="--i: 1;"><a href="#about">About</a></li>
+            <li style="--i: 2;"><a href="#sports">Sports</a></li>
+            <li style="--i: 3;"><a href="#events">Activities</a></li>
+            <li style="--i: 4;"><a href="#join">Join Us</a></li>
+            <li style="--i: 5;"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="overview-section">
+            <h2>Welcome to APUFit Club</h2>
+            <p>Your journey to health and wellness starts here! APUFit Club provides a supportive community with multiple sports divisions, regular activities, and various ways to get involved.</p>
+            
+            <div class="features-container">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>About Us</h3>
+                        <p>Learn about our mission and commitment to student wellness.</p>
+                        <a href="about.html" class="cta-button">Discover More</a>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sport Divisions</h3>
+                        <p>Explore our weightlifting, running, basketball, and yoga programs.</p>
+                        <a href="sports.html" class="cta-button">View Sports</a>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Activities</h3>
+                        <p>Check out our group sessions, competitions, and wellness workshops.</p>
+                        <a href="activities.html" class="cta-button">See Events</a>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Membership</h3>
+                        <p>Join our community and start your fitness journey today.</p>
+                        <a href="join.html" class="cta-button">Join Now</a>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Get in Touch</h3>
+                        <p>Questions? Reach out to our team for more information.</p>
+                        <a href="contact.html" class="cta-button">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2025 APUFit Club - Asia Pacific University</p>
+        <p>Contact us: apufit@apu.edu.my</p>
+    </footer>
+
+    <script>
+        // Toggle for sport details
+        document.querySelectorAll('.sport-card h3').forEach(header => {
+            header.addEventListener('click', () => {
+                const card = header.parentElement;
+                card.classList.toggle('active');
+            });
+        });
+        
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

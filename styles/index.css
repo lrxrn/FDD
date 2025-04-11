@@ -1,0 +1,123 @@
+/* Styles specific to index.html */
+
+.overview-section {
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--primary);
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+    margin-bottom: 1rem;
+}
+
+/* Sports section specific styles */
+.event-card, .sport-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary);
+}
+
+.event-card:hover, .sport-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.event-icon, .sport-icon {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+}
+
+.sport-details {
+    display: none;
+    padding: 1.5rem 0 0.5rem;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+}
+
+.sport-card.active .sport-details {
+    display: block;
+}
+
+.sport-card h3 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sport-card h3:after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: auto;
+    transition: var(--transition);
+}
+
+.sport-card.active h3:after {
+    transform: rotate(180deg);
+}
+
+/* Media queries specific to index page */
+@media (max-width: 768px) {
+    .feature-box {
+        flex-direction: column;
+        text-align: center;
+        border-left: none;
+        border-top: 4px solid var(--primary);
+    }
+    
+    .feature-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
