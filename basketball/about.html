@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Basketball - APUFit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/basketball.css">
+    <style>
+        .about-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .team-section {
+            margin-top: 50px;
+        }
+        
+        .coaches {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .coach-card {
+            width: 250px;
+            height: 350px;
+            perspective: 1000px;
+            position: relative;
+        }
+        
+        .coach-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        
+        .coach-card:hover .coach-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .coach-photo, .coach-info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .coach-photo {
+            background-color: white;
+        }
+        
+        .coach-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .coach-info {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotateY(180deg);
+        }
+        
+        .coach-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .coach-info p {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .coach-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .coach-social a {
+            color: var(--secondary-color);
+            transition: color 0.3s;
+        }
+        
+        .coach-social a:hover {
+            color: var(--primary-color);
+        }
+        
+        .achievements {
+            margin-top: 50px;
+        }
+        
+        .achievement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .achievement-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .achievement-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .achievement-card span {
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🏀 APUFit Basketball</div>
+        <p>Basketball Division @ APUFit</p>
+    </header>
+    
+    <nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#trainings">Trainings</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#join">Join Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="about-section">
+        <h1>About APUFit Basketball</h1>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Established in 2010, the APUFit Basketball Division has grown from a small group of enthusiasts to one of the most active sports communities at Asia Pacific University. Our mission is to promote basketball excellence while fostering teamwork, discipline, and leadership among students.</p>
+                
+                <p>What started as informal practice sessions has evolved into a structured program with dedicated coaches, regular training sessions, and participation in various intercollegiate tournaments throughout Malaysia.</p>
+                
+                <h2>Our Philosophy</h2>
+                <p>At APUFit Basketball, we believe that sports are a powerful vehicle for personal growth. We emphasize:</p>
+                <ul>
+                    <li><strong>Skill Development:</strong> Technical and tactical aspects of basketball</li>
+                    <li><strong>Physical Fitness:</strong> Strength, agility, and endurance training</li>
+                    <li><strong>Mental Toughness:</strong> Focus, resilience, and competitive mindset</li>
+                    <li><strong>Team Dynamics:</strong> Communication, cooperation, and mutual support</li>
+                </ul>
+                
+                <p>We welcome players of all skill levels, from beginners looking to learn the basics to experienced athletes aiming to compete at higher levels.</p>
+            </div>
+            
+            <div class="about-image">
+                <img src="../images/basketball-team1.jpg" alt="APUFit Basketball Team">
+            </div>
+        </div>
+        
+        <div class="team-section">
+            <h2>Our Coaching Team</h2>
+            <p>Our dedicated coaches bring years of experience and passion to help you develop your basketball skills.</p>
+            
+            <div class="coaches">
+                <div class="coach-card">
+                    <div class="coach-card-inner">
+                        <div class="coach-photo">
+                            <img src="../images/basketball-coach1.jpg" alt="Coach Michael">
+                        </div>
+                        <div class="coach-info">
+                            <h3>Michael Chen</h3>
+                            <p>Head Coach</p>
+                            <p>Former professional player with 15+ years of coaching experience.</p>
+                            <div class="coach-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coach-card">
+                    <div class="coach-card-inner">
+                        <div class="coach-photo">
+                            <img src="../images/basketball-coach2.jpg" alt="Coach Sarah">
+                        </div>
+                        <div class="coach-info">
+                            <h3>Sarah Wong</h3>
+                            <p>Assistant Coach</p>
+                            <p>Specializes in offensive strategies and shooting techniques.</p>
+                            <div class="coach-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coach-card">
+                    <div class="coach-card-inner">
+                        <div class="coach-photo">
+                            <img src="../images/basketball-coach3.jpg" alt="Coach Raj">
+                        </div>
+                        <div class="coach-info">
+                            <h3>Raj Patel</h3>
+                            <p>Fitness Coach</p>
+                            <p>Certified strength and conditioning specialist focused on athlete development.</p>
+                            <div class="coach-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="achievements">
+            <h2>Our Achievements</h2>
+            <p>Over the years, APUFit Basketball has achieved numerous milestones that demonstrate our commitment to excellence.</p>
+            
+            <div class="achievement-list">
+                <div class="achievement-card">
+                    <h3>Intercollegiate Champions</h3>
+                    <p>Champions of the <span>2024 KL Intercollegiate Basketball Tournament</span></p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>National Recognition</h3>
+                    <p>Semi-finalists in the <span>2023 Malaysian University Sports Council Championship</span></p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Community Impact</h3>
+                    <p>Organized <span>12 basketball clinics</span> for underprivileged children in partnership with local NGOs</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Player Development</h3>
+                    <p><span>5 alumni</span> have gone on to play in semi-professional leagues in Malaysia</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Regional Tournament</h3>
+                    <p>Winners of the <span>2022 Southeast Asia University Basketball Cup</span> held in Singapore</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Academic Excellence</h3>
+                    <p>Maintained <span>team GPA above 3.5</span> for 3 consecutive years, demonstrating our commitment to student-athlete development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/APUFitClub" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/APUFitClub" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/APUFitClub" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 APUFit Basketball - Asia Pacific University</p>
+            <a href="../contactUs.html" class="contact-button">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

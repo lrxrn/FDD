@@ -126,6 +126,37 @@ footer {
     padding: 2.5rem 0;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    color: var(--primary);
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background-color: var(--light);
+}
+
 .mobile-menu-toggle {
     display: none;
     cursor: pointer;
@@ -196,5 +227,10 @@ footer {
     nav ul.active li {
         transform: translateY(0);
         opacity: 1;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
