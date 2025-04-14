@@ -20,6 +20,9 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
@@ -286,4 +289,26 @@ footer {
 .banner-content p {
     font-size: 1.2rem;
     opacity: 0.9;
+}
+
+/* Add this CSS for the "Back to Main Page" button */
+.main-page-button {
+    background: linear-gradient(to right, #0062cc, #0096ff);
+    color: white !important;
+    border-radius: 20px; /* Rounded corners */
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-page-button:hover {
+    background: linear-gradient(to right, #005cb8, #007ecc);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Make sure the button aligns well with other nav items */
+nav ul li:last-child {
+    margin-left: 10px;
 }
