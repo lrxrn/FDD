@@ -296,7 +296,7 @@ footer {
     background: linear-gradient(to right, #0062cc, #0096ff);
     color: white !important;
     border-radius: 20px; /* Rounded corners */
-    padding: 8px 15px;
+    padding: 6px 15px;
     transition: all 0.3s ease;
     font-weight: 500;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -311,4 +311,72 @@ footer {
 /* Make sure the button aligns well with other nav items */
 nav ul li:last-child {
     margin-left: 10px;
+}
+
+/* Add this rule to disable hover underline for specified links */
+.no-hover-line {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    /* The following covers most common hover effects */
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    /* Keep the normal state appearance */
+    color: inherit;
+}
+
+.no-hover-line::after {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background-color: transparent !important;
+}
+
+.no-hover-line:hover::after {
+    width: 0 !important;
+}
+
+.no-hover-line:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    /* The following covers most common hover effects */
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    /* Keep the normal state appearance */
+    color: white !important;
+}
+
+/* Add this to your existing CSS file */
+
+.back-to-apufit {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.apufit-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.apufit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.apufit-button i {
+    margin-right: 8px;
 }
