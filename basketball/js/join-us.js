@@ -58,68 +58,70 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.classList.add('submitting');
         submitBtn.innerHTML = 'Submitting...';
         
-        // Collect form data
-        const formData = new FormData(joinForm);
-        const formDataObj = {};
-        
-        // Convert FormData to a regular object
-        formData.forEach((value, key) => {
-            // Handle multiple values for the same key (like checkboxes)
-            if (key === 'availability') {
-                if (!formDataObj[key]) {
-                    formDataObj[key] = [];
-                }
-                formDataObj[key].push(value);
-            } else {
-                formDataObj[key] = value;
-            }
-        });
-        
-        // Create URL parameters for Google Apps Script
-        const params = new URLSearchParams({
-            fullName: formDataObj.fullName,
-            email: formDataObj.email,
-            phone: formDataObj.phone,
-            academicProgram: formDataObj.academicProgram,
-            yearOfStudy: formDataObj.yearOfStudy,
-            team: formDataObj.team,
-            position: formDataObj.position,
-            experience: formDataObj.experience + " years",
-            availability: Array.isArray(formDataObj.availability)
-                ? formDataObj.availability.join(", ")
-                : formDataObj.availability,
-            motivation: formDataObj.motivation
-        });
-        
-        // Submit to Google Apps Script
-        submitToGoogleScript(params, submitBtn);
+        // Collect form data and create a hidden iframe for submission
+        submitToGoogleScriptWithIframe(submitBtn);
     }
     
     /**
-     * Submit form data to Google Apps Script
+     * Submit form data to Google Apps Script using a hidden iframe to avoid CORS issues
      */
-    function submitToGoogleScript(params, submitBtn) {
-        console.log('Submitting data to Google Apps Script:', params.toString());
+    function submitToGoogleScriptWithIframe(submitBtn) {
+        // Create a hidden iframe for the form submission
+        let tempIframe = document.getElementById('temp-iframe');
+        if (!tempIframe) {
+            tempIframe = document.createElement('iframe');
+            tempIframe.id = 'temp-iframe';
+            tempIframe.name = 'temp-iframe';
+            tempIframe.style.display = 'none';
+            document.body.appendChild(tempIframe);
+        }
         
-        fetch(googleScriptUrl + "?" + params.toString())
-            .then(response => response.text())
-            .then(message => {
-                showFormStatus('Thank you for your application! We\'ll be in touch soon about the next steps.', 'success');
-                joinForm.reset();
-            })
-            .catch(error => {
+        // Set up response handling
+        tempIframe.onload = function() {
+            try {
+                // Wait a moment for the iframe to fully load
+                setTimeout(() => {
+                    showFormStatus('Thank you for your application! We\'ll be in touch soon about the next steps.', 'success');
+                    joinForm.reset();
+                    
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('submitting');
+                    submitBtn.innerHTML = 'Submit Application';
+                    
+                    // Scroll to the form status message
+                    formStatus.scrollIntoView({ behavior: 'smooth' });
+                }, 1000);
+            } catch (error) {
                 console.error('Error:', error);
                 showFormStatus('There was an error submitting your application. Please try again later or contact us directly.', 'error');
-            })
-            .finally(() => {
+                
                 // Reset button state
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('submitting');
                 submitBtn.innerHTML = 'Submit Application';
-                
-                // Scroll to the form status message
-                formStatus.scrollIntoView({ behavior: 'smooth' });
-            });
+            }
+        };
+        
+        // Modify the form to submit to the iframe
+        joinForm.target = 'temp-iframe';
+        joinForm.action = googleScriptUrl;
+        joinForm.method = 'POST';
+        
+        // Add a flag for the Google Script to know this is a form submission
+        const formFlag = document.createElement('input');
+        formFlag.type = 'hidden';
+        formFlag.name = 'formSubmitted';
+        formFlag.value = 'true';
+        joinForm.appendChild(formFlag);
+        
+        // Submit the form
+        joinForm.submit();
+        
+        // Clean up by removing the flag
+        setTimeout(() => {
+            joinForm.removeChild(formFlag);
+        }, 100);
     }
     
     /**
