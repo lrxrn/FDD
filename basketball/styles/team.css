@@ -1,0 +1,218 @@
+/* Team Page Styles */
+.team-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.team-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.team-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-categories h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 127, 0, 0.2);
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.member-card {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-photo {
+    height: 200px;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.member-card:hover .member-photo img {
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.member-info .position {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.member-info .program {
+    color: #6d6d6d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.member-info .quote {
+    color: #78909c;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Team Achievements Section */
+.team-achievements {
+    background-color: rgba(255, 127, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 50px 0;
+}
+
+.team-achievements h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.achievements-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-right: 15px;
+}
+
+.achievement-detail h3 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.achievement-detail p {
+    color: #6d6d6d;
+    font-size: 0.9rem;
+}
+
+/* Join Team Section */
+.join-team {
+    text-align: center;
+    padding: 30px;
+    margin: 40px 0;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.join-team h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.join-team p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #C0392B; /* Darker red */
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-members {
+        gap: 20px;
+    }
+    
+    .member-card {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .team-achievements {
+        padding: 30px 20px;
+    }
+    
+    .achievements-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .achievement {
+        width: 100%;
+        max-width: 350px;
+    }
+}
