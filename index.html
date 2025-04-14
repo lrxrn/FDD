@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APUFit Club - Health & Wellness at Asia Pacific University</title>
+    <meta name="description" content="APUFit Club provides fitness programs, sports activities, and wellness resources for students and staff at Asia Pacific University.">
+    <meta name="keywords" content="fitness, sports, wellness, APU, university fitness, Asia Pacific University">
+    <meta name="author" content="APUFit Club">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
@@ -20,10 +30,10 @@
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li style="--i: 1;"><a href="#about">About</a></li>
-            <li style="--i: 2;"><a href="#sports">Sports</a></li>
-            <li style="--i: 3;"><a href="#events">Activities</a></li>
-            <li style="--i: 4;"><a href="#join">Join Us</a></li>
+            <li style="--i: 1;"><a href="about.html">About</a></li>
+            <li style="--i: 2;"><a href="sports.html">Sports</a></li>
+            <li style="--i: 3;"><a href="events.html">Events</a></li>
+            <li style="--i: 4;"><a href="join.html">Join Us</a></li>
         </ul>
     </nav>
 
@@ -60,9 +70,9 @@
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                     <div class="feature-content">
-                        <h3>Activities</h3>
+                        <h3>Events</h3>
                         <p>Check out our group sessions, competitions, and wellness workshops.</p>
-                        <a href="activities.html" class="cta-button">See Events</a>
+                        <a href="events.html" class="cta-button">See Events</a>
                     </div>
                 </div>
                 
@@ -83,9 +93,9 @@
     <footer id="contact">
         <div class="footer-content">
             <div class="social-icons">
-                <a href="https://www.facebook.com/APUFitClub" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/APUFitClub" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/c/APUFitClub" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
             <p>&copy; 2025 APUFit Club - Asia Pacific University</p>
             <a href="contactUs.html" class="contact-button">
@@ -95,14 +105,6 @@
     </footer>
 
     <script>
-        // Toggle for sport details
-        document.querySelectorAll('.sport-card h3').forEach(header => {
-            header.addEventListener('click', () => {
-                const card = header.parentElement;
-                card.classList.toggle('active');
-            });
-        });
-        
         // Mobile menu toggle
         document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
             document.querySelector('nav ul').classList.toggle('active');
