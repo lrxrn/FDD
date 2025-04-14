@@ -1,5 +1,10 @@
 # Fundamentals of Web Development (FDD)
 
+<div style="text-align: center">
+  <img src="assets/apufit-logo.png" alt="APUFit Logo" width="200" style="border-radius: 100%;">
+  <h1>APUFit</h1>
+</div>
+
 ## Overview
 This repository contains materials related to the APUFit Club website development project. The project focuses on creating a web presence for the student-initiated health and wellness organization at Asia Pacific University (APU).
 
