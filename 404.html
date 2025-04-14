@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | APUFit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/404.css">
+</head>
+<body>
+    <div class="sports-elements">
+        <i class="fas fa-basketball-ball floating-icon"></i>
+        <i class="fas fa-football-ball floating-icon"></i>
+        <i class="fas fa-table-tennis floating-icon"></i>
+        <i class="fas fa-running floating-icon"></i>
+        <i class="fas fa-swimmer floating-icon"></i>
+        <i class="fas fa-volleyball-ball floating-icon"></i>
+        <i class="fas fa-dumbbell floating-icon"></i>
+        <i class="fas fa-golf-ball floating-icon"></i>
+        <i class="fas fa-medal floating-icon"></i>
+        <i class="fas fa-biking floating-icon"></i>
+        <i class="fas fa-baseball-ball floating-icon"></i>
+        <i class="fas fa-hockey-puck floating-icon"></i>
+        <i class="fas fa-skating floating-icon"></i>
+        <i class="fas fa-hiking floating-icon"></i>
+        <i class="fas fa-snowboarding floating-icon"></i>
+        <i class="fas fa-skiing floating-icon"></i>
+        <i class="fas fa-bowling-ball floating-icon"></i>
+        <i class="fas fa-futbol floating-icon"></i>
+        <i class="fas fa-tennis-ball floating-icon"></i>
+        <i class="fas fa-trophy floating-icon"></i>
+        <i class="fas fa-stopwatch floating-icon"></i>
+        <i class="fas fa-heartbeat floating-icon"></i>
+        <i class="fas fa-weight floating-icon"></i>
+        <i class="fas fa-shoe-prints floating-icon"></i>
+        <i class="fas fa-fist-raised floating-icon"></i>
+        <i class="fas fa-tshirt floating-icon"></i>
+        <i class="fas fa-baseball floating-icon"></i>
+        <i class="fas fa-water floating-icon"></i>
+        <i class="fas fa-fire-alt floating-icon"></i>
+        <i class="fas fa-walking floating-icon"></i>
+        <i class="fas fa-frog floating-icon"></i>
+        <i class="fas fa-chart-line floating-icon"></i>
+        <i class="fas fa-apple-alt floating-icon"></i>
+        <i class="fas fa-bolt floating-icon"></i>
+        <i class="fas fa-mountain floating-icon"></i>
+        <i class="fas fa-skiing-nordic floating-icon"></i>
+        <i class="fas fa-users floating-icon"></i>
+        <i class="fas fa-atom floating-icon"></i>
+        <i class="fas fa-heart floating-icon"></i>
+        <i class="fas fa-lungs floating-icon"></i>
+    </div>
+
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Buzzer Beater!</h2>
+        <p>Oops! You've landed in the wrong arena. The fitness challenge you're looking for has been drafted to another team.</p>
+        
+        <p>Get back in the zone and continue your winning streak!</p>
+        <a href="index.html" class="btn">Championship Court</a>
+        <a href="javascript:history.back()" class="btn">Replay Move</a>
+    </div>
+
+    <script>
+        // Add random movement to floating icons
+        const floatingIcons = document.querySelectorAll('.floating-icon');
+        const usedPositions = [];
+        const minDistance = 100; // Minimum pixel distance between icons
+        
+        floatingIcons.forEach(icon => {
+            let randomX, randomY;
+            let attempts = 0;
+            let positionFound = false;
+            
+            // Try to find a position that doesn't overlap with existing icons
+            while (!positionFound && attempts < 20) {
+                randomX = Math.floor(Math.random() * 90);
+                randomY = Math.floor(Math.random() * 90);
+                
+                // Check if this position is far enough from all other icons
+                positionFound = true;
+                for (const pos of usedPositions) {
+                    const distance = Math.sqrt(
+                        Math.pow((randomX - pos.x) * window.innerWidth / 100, 2) + 
+                        Math.pow((randomY - pos.y) * window.innerHeight / 100, 2)
+                    );
+                    
+                    if (distance < minDistance) {
+                        positionFound = false;
+                        break;
+                    }
+                }
+                attempts++;
+            }
+            
+            // Record this position
+            usedPositions.push({ x: randomX, y: randomY });
+            
+            const randomDuration = 10 + Math.floor(Math.random() * 20);
+            const randomDelay = Math.floor(Math.random() * 8);
+            const randomSize = 10 + Math.floor(Math.random() * 20); // Smaller icons
+            const randomOpacity = 0.2 + Math.random() * 0.4;
+            
+            icon.style.fontSize = `${randomSize}px`;
+            icon.style.top = `${randomY}%`;
+            icon.style.left = `${randomX}%`;
+            icon.style.animationDuration = `${randomDuration}s`;
+            icon.style.animationDelay = `${randomDelay}s`;
+            icon.style.opacity = randomOpacity;
+            
+            // Assign different animation paths to create more variety and less interference
+            const animationPaths = ['bounce-around', 'float-diagonal', 'circular-path', 'zigzag-path'];
+            const randomPath = animationPaths[Math.floor(Math.random() * animationPaths.length)];
+            icon.style.animationName = randomPath;
+        });
+    </script>
+</body>
+</html>
