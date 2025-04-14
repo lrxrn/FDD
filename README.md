@@ -16,10 +16,17 @@ Each student will develop:
 - 4-5 interlinked pages focused on a specific sport
 
 ## Color Scheme
+### Main page
 - Primary (Headers & Key Titles): Royal Blue #0057B7
 - Accent (Icons, Emphasis): Sky Blue #4FC3F7
 - Text (Body): Charcoal #2E2E2E
 - Background (Sections or callouts): Light Gray #F5F7FA
+
+### Basketball
+- Primary (Headers & Key Titles): Orange #FF7F00
+- Accent (Icons, Emphasis): Dark Brown #8B4513
+- Text (Body): Black #000000
+- Background (Sections or callouts): Light Orange #FFE4B5
 
 ## Getting Started
 1. Clone this repository
