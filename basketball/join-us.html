@@ -36,183 +36,185 @@
         </div>
         
         <div class="application-container">
-            <div class="form-section">
-                <h2>Basketball Team Application</h2>
-                <div id="form-status" class="hidden"></div>
+            <h2>Basketball Team Application</h2>
+            
+            <div class="form-content-wrapper">
+                <div class="form-section">
+                    <div id="form-status" class="hidden"></div>
+                    
+                    <form id="join-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="academicProgram">Academic Program *</label>
+                            <input type="text" id="academicProgram" name="academicProgram" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="yearOfStudy">Year of Study *</label>
+                            <select id="yearOfStudy" name="yearOfStudy" required>
+                                <option value="">Select Year</option>
+                                <option value="1">Year 1</option>
+                                <option value="2">Year 2</option>
+                                <option value="3">Year 3</option>
+                                <option value="4">Year 4</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="team">Preferred Team *</label>
+                            <select id="team" name="team" required>
+                                <option value="">Select Team</option>
+                                <option value="Men's Team">Men's Team</option>
+                                <option value="Women's Team">Women's Team</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="position">Preferred Position *</label>
+                            <select id="position" name="position" required>
+                                <option value="">Select Position</option>
+                                <option value="Point Guard">Point Guard</option>
+                                <option value="Shooting Guard">Shooting Guard</option>
+                                <option value="Small Forward">Small Forward</option>
+                                <option value="Power Forward">Power Forward</option>
+                                <option value="Center">Center</option>
+                                <option value="Flexible">Flexible/Multiple Positions</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Basketball Experience (years) *</label>
+                            <input type="number" id="experience" name="experience" min="0" max="30" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="previousTeams">Previous Teams/Clubs (if any)</label>
+                            <textarea id="previousTeams" name="previousTeams" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="achievements">Notable Achievements in Basketball</label>
+                            <textarea id="achievements" name="achievements" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="motivation">Why do you want to join our team? *</label>
+                            <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group availability">
+                            <label>Availability for Training *</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="monday" name="availability" value="Monday">
+                                    <label for="monday">Monday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="tuesday" name="availability" value="Tuesday">
+                                    <label for="tuesday">Tuesday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="wednesday" name="availability" value="Wednesday">
+                                    <label for="wednesday">Wednesday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="thursday" name="availability" value="Thursday">
+                                    <label for="thursday">Thursday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="friday" name="availability" value="Friday">
+                                    <label for="friday">Friday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="saturday" name="availability" value="Saturday">
+                                    <label for="saturday">Saturday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="sunday" name="availability" value="Sunday">
+                                    <label for="sunday">Sunday</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="otherSports">Other Sports/Activities</label>
+                            <input type="text" id="otherSports" name="otherSports">
+                        </div>
+                        
+                        <div class="form-group agreement">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <label for="agreement">I understand that submitting this form does not guarantee a spot on the team, and I agree to participate in tryouts if selected.</label>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="reset" class="reset-btn">Reset Form</button>
+                            <button type="submit" class="submit-btn">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
                 
-                <form id="join-form">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="academicProgram">Academic Program *</label>
-                        <input type="text" id="academicProgram" name="academicProgram" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="yearOfStudy">Year of Study *</label>
-                        <select id="yearOfStudy" name="yearOfStudy" required>
-                            <option value="">Select Year</option>
-                            <option value="1">Year 1</option>
-                            <option value="2">Year 2</option>
-                            <option value="3">Year 3</option>
-                            <option value="4">Year 4</option>
-                            <option value="5+">Year 5+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="team">Preferred Team *</label>
-                        <select id="team" name="team" required>
-                            <option value="">Select Team</option>
-                            <option value="Men's Team">Men's Team</option>
-                            <option value="Women's Team">Women's Team</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="position">Preferred Position *</label>
-                        <select id="position" name="position" required>
-                            <option value="">Select Position</option>
-                            <option value="Point Guard">Point Guard</option>
-                            <option value="Shooting Guard">Shooting Guard</option>
-                            <option value="Small Forward">Small Forward</option>
-                            <option value="Power Forward">Power Forward</option>
-                            <option value="Center">Center</option>
-                            <option value="Flexible">Flexible/Multiple Positions</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="experience">Basketball Experience (years) *</label>
-                        <input type="number" id="experience" name="experience" min="0" max="30" required>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="previousTeams">Previous Teams/Clubs (if any)</label>
-                        <textarea id="previousTeams" name="previousTeams" rows="3"></textarea>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="achievements">Notable Achievements in Basketball</label>
-                        <textarea id="achievements" name="achievements" rows="3"></textarea>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="motivation">Why do you want to join our team? *</label>
-                        <textarea id="motivation" name="motivation" rows="4" required></textarea>
-                    </div>
-                    
-                    <div class="form-group availability">
-                        <label>Availability for Training *</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="monday" name="availability" value="Monday">
-                                <label for="monday">Monday</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="tuesday" name="availability" value="Tuesday">
-                                <label for="tuesday">Tuesday</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="wednesday" name="availability" value="Wednesday">
-                                <label for="wednesday">Wednesday</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="thursday" name="availability" value="Thursday">
-                                <label for="thursday">Thursday</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="friday" name="availability" value="Friday">
-                                <label for="friday">Friday</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="saturday" name="availability" value="Saturday">
-                                <label for="saturday">Saturday</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="sunday" name="availability" value="Sunday">
-                                <label for="sunday">Sunday</label>
-                            </div>
+                <div class="tryout-info">
+                    <h2>Tryout Information</h2>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Next Tryout Dates</h3>
+                            <p>May 10-12, 2025</p>
+                            <p>September 5-7, 2025</p>
                         </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="otherSports">Other Sports/Activities</label>
-                        <input type="text" id="otherSports" name="otherSports">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Location</h3>
+                            <p>APU Main Sports Complex</p>
+                            <p>Basketball Court A</p>
+                        </div>
                     </div>
                     
-                    <div class="form-group agreement">
-                        <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement">I understand that submitting this form does not guarantee a spot on the team, and I agree to participate in tryouts if selected.</label>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>What to Bring</h3>
+                            <ul>
+                                <li>Student ID</li>
+                                <li>Basketball shoes</li>
+                                <li>Athletic clothing</li>
+                                <li>Water bottle</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="form-buttons">
-                        <button type="reset" class="reset-btn">Reset Form</button>
-                        <button type="submit" class="submit-btn">Submit Application</button>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="tryout-info">
-                <h2>Tryout Information</h2>
-                <div class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="info-text">
-                        <h3>Next Tryout Dates</h3>
-                        <p>May 10-12, 2025</p>
-                        <p>September 5-7, 2025</p>
-                    </div>
-                </div>
-                
-                <div class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="info-text">
-                        <h3>Location</h3>
-                        <p>APU Main Sports Complex</p>
-                        <p>Basketball Court A</p>
-                    </div>
-                </div>
-                
-                <div class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <div class="info-text">
-                        <h3>What to Bring</h3>
-                        <ul>
-                            <li>Student ID</li>
-                            <li>Basketball shoes</li>
-                            <li>Athletic clothing</li>
-                            <li>Water bottle</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <div class="info-text">
-                        <h3>Questions?</h3>
-                        <p>Email: <a href="mailto:basketball.apufit@apu.edu.my">basketball.apufit@apu.edu.my</a></p>
-                        <p>Coach's Office: Sports Complex, Room 105</p>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Questions?</h3>
+                            <p>Email: <a href="mailto:basketball.apufit@apu.edu.my">basketball.apufit@apu.edu.my</a></p>
+                            <p>Coach's Office: Sports Complex, Room 105</p>
+                        </div>
                     </div>
                 </div>
             </div>

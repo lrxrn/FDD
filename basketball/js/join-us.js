@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 1000);
             } catch (error) {
                 console.error('Error:', error);
-                showFormStatus('There was an error submitting your application. Please try again later or contact us directly.', 'error');
+                showFormStatus('There was an error submitting your application. Please try again later or contact us directly using the button below.', 'error');
                 
                 // Reset button state
                 submitBtn.disabled = false;

@@ -33,6 +33,42 @@
 
 .application-container {
     display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.application-container > h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .form-content-wrapper {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .form-section {
+        flex: 3;
+    }
+    
+    .tryout-info {
+        flex: 2;
+    }
+}
+
+.application-container {
+    display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 3rem;
