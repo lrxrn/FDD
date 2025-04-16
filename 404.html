@@ -3,116 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | APUFit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/404.css">
+    <title>Page Not Found - APUFit Club</title>
+    <meta name="description" content="The page you're looking for cannot be found at APUFit Club website.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/404.css">
 </head>
 <body>
-    <div class="sports-elements">
-        <i class="fas fa-basketball-ball floating-icon"></i>
-        <i class="fas fa-football-ball floating-icon"></i>
-        <i class="fas fa-table-tennis floating-icon"></i>
-        <i class="fas fa-running floating-icon"></i>
-        <i class="fas fa-swimmer floating-icon"></i>
-        <i class="fas fa-volleyball-ball floating-icon"></i>
-        <i class="fas fa-dumbbell floating-icon"></i>
-        <i class="fas fa-golf-ball floating-icon"></i>
-        <i class="fas fa-medal floating-icon"></i>
-        <i class="fas fa-biking floating-icon"></i>
-        <i class="fas fa-baseball-ball floating-icon"></i>
-        <i class="fas fa-hockey-puck floating-icon"></i>
-        <i class="fas fa-skating floating-icon"></i>
-        <i class="fas fa-hiking floating-icon"></i>
-        <i class="fas fa-snowboarding floating-icon"></i>
-        <i class="fas fa-skiing floating-icon"></i>
-        <i class="fas fa-bowling-ball floating-icon"></i>
-        <i class="fas fa-futbol floating-icon"></i>
-        <i class="fas fa-tennis-ball floating-icon"></i>
-        <i class="fas fa-trophy floating-icon"></i>
-        <i class="fas fa-stopwatch floating-icon"></i>
-        <i class="fas fa-heartbeat floating-icon"></i>
-        <i class="fas fa-weight floating-icon"></i>
-        <i class="fas fa-shoe-prints floating-icon"></i>
-        <i class="fas fa-fist-raised floating-icon"></i>
-        <i class="fas fa-tshirt floating-icon"></i>
-        <i class="fas fa-baseball floating-icon"></i>
-        <i class="fas fa-water floating-icon"></i>
-        <i class="fas fa-fire-alt floating-icon"></i>
-        <i class="fas fa-walking floating-icon"></i>
-        <i class="fas fa-frog floating-icon"></i>
-        <i class="fas fa-chart-line floating-icon"></i>
-        <i class="fas fa-apple-alt floating-icon"></i>
-        <i class="fas fa-bolt floating-icon"></i>
-        <i class="fas fa-mountain floating-icon"></i>
-        <i class="fas fa-skiing-nordic floating-icon"></i>
-        <i class="fas fa-users floating-icon"></i>
-        <i class="fas fa-atom floating-icon"></i>
-        <i class="fas fa-heart floating-icon"></i>
-        <i class="fas fa-lungs floating-icon"></i>
-    </div>
+    <header>
+        <div class="logo">🏋️‍♂️ APUFit Club</div>
+        <p>Health & Wellness at Asia Pacific University</p>
+    </header>
+
+    <nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li style="--i: 1;"><a href="index.html">Home</a></li>
+            <li style="--i: 2;"><a href="sports.html">Sports</a></li>
+            <li style="--i: 3;"><a href="events.html">Events</a></li>
+            <li style="--i: 4;"><a href="join.html">Join Us</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <h1 class="error-code">404</h1>
-        <h2 class="error-title">Buzzer Beater!</h2>
-        <p>Oops! You've landed in the wrong arena. The fitness challenge you're looking for has been drafted to another team.</p>
-        
-        <p>Get back in the zone and continue your winning streak!</p>
-        <a href="index.html" class="btn">Championship Court</a>
-        <a href="javascript:history.back()" class="btn">Replay Move</a>
+        <section class="error-section">
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h1>404</h1>
+                <h2>Page Not Found</h2>
+                <p>Oops! It looks like you've tried to reach a page that doesn't exist or may have been moved.</p>
+                <p>Don't worry, you can still find your way back to our fitness community!</p>
+                
+                <div class="error-options">
+                    <a href="index.html" class="cta-button">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                    <a href="contactUs.html" class="contact-link">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+                
+                <div class="suggested-links">
+                    <h3>You might be looking for:</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> APUFit Home</a></li>
+                        <li><a href="basketball/index.html"><i class="fas fa-basketball-ball"></i> Basketball Division</a></li>
+                        <li><a href="contactUs.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/APUFitClub" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/APUFitClub" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/APUFitClub" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 APUFit Club - Asia Pacific University</p>
+            <a href="contactUs.html" class="contact-button">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </footer>
+
     <script>
-        // Add random movement to floating icons
-        const floatingIcons = document.querySelectorAll('.floating-icon');
-        const usedPositions = [];
-        const minDistance = 100; // Minimum pixel distance between icons
-        
-        floatingIcons.forEach(icon => {
-            let randomX, randomY;
-            let attempts = 0;
-            let positionFound = false;
-            
-            // Try to find a position that doesn't overlap with existing icons
-            while (!positionFound && attempts < 20) {
-                randomX = Math.floor(Math.random() * 90);
-                randomY = Math.floor(Math.random() * 90);
-                
-                // Check if this position is far enough from all other icons
-                positionFound = true;
-                for (const pos of usedPositions) {
-                    const distance = Math.sqrt(
-                        Math.pow((randomX - pos.x) * window.innerWidth / 100, 2) + 
-                        Math.pow((randomY - pos.y) * window.innerHeight / 100, 2)
-                    );
-                    
-                    if (distance < minDistance) {
-                        positionFound = false;
-                        break;
-                    }
-                }
-                attempts++;
-            }
-            
-            // Record this position
-            usedPositions.push({ x: randomX, y: randomY });
-            
-            const randomDuration = 10 + Math.floor(Math.random() * 20);
-            const randomDelay = Math.floor(Math.random() * 8);
-            const randomSize = 10 + Math.floor(Math.random() * 20); // Smaller icons
-            const randomOpacity = 0.2 + Math.random() * 0.4;
-            
-            icon.style.fontSize = `${randomSize}px`;
-            icon.style.top = `${randomY}%`;
-            icon.style.left = `${randomX}%`;
-            icon.style.animationDuration = `${randomDuration}s`;
-            icon.style.animationDelay = `${randomDelay}s`;
-            icon.style.opacity = randomOpacity;
-            
-            // Assign different animation paths to create more variety and less interference
-            const animationPaths = ['bounce-around', 'float-diagonal', 'circular-path', 'zigzag-path'];
-            const randomPath = animationPaths[Math.floor(Math.random() * animationPaths.length)];
-            icon.style.animationName = randomPath;
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
         });
     </script>
 </body>
