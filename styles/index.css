@@ -2,7 +2,7 @@
 
 /* Hero Banner */
 .hero-banner {
-    background: linear-gradient(rgba(0, 87, 183, 0.85), rgba(52, 152, 219, 0.85)), url('../images/basketball-banner.jpg');
+    background: url('../images/main-banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
