@@ -1,26 +1,113 @@
 /* Styles specific to index.html */
 
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0, 87, 183, 0.85), rgba(52, 152, 219, 0.85)), url('../images/basketball-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-button.primary {
+    background-color: white;
+    color: var(--primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-button.large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.hero-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Section Styles */
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Overview Section */
 .overview-section {
     text-align: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
 .features-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
 }
 
 .feature-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: white;
     border-radius: 10px;
-    padding: 1.5rem;
-    text-align: left;
+    padding: 2rem 1.25rem;
+    text-align: center;
     transition: transform 0.3s ease;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 4px solid var(--primary);
+    border-top: 4px solid var(--primary);
+    border-left: none;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .feature-box:hover {
@@ -29,76 +116,400 @@
 
 .feature-icon {
     color: var(--primary);
-    font-size: 2rem;
-    margin-right: 1.5rem;
-    min-width: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    margin-right: 0;
+    min-width: auto;
     text-align: center;
 }
 
 .feature-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .feature-box h3 {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .feature-box p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Sports section specific styles */
-.event-card, .sport-card {
+.cta-button {
+    margin-top: auto;
+    align-self: center;
+}
+
+.cta-button.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Sports Showcase Section */
+.sports-showcase-section {
+    margin: 4rem 0;
+}
+
+.sports-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sport-showcase-card {
     background: white;
     border-radius: 12px;
-    padding: 1.8rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    transition: var(--transition);
-    border-left: 4px solid var(--primary);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
 
-.event-card:hover, .sport-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.sport-showcase-card:hover {
+    transform: translateY(-10px);
 }
 
-.event-icon, .sport-icon {
+.sport-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sport-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sport-showcase-card:hover .sport-image img {
+    transform: scale(1.05);
+}
+
+.sport-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.football-bg {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.badminton-bg {
+    background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.swimming-bg {
+    background: linear-gradient(135deg, #03A9F4, #0277BD);
+}
+
+.sport-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sport-showcase-card:hover .sport-overlay {
+    opacity: 1;
+}
+
+.overlay-button {
+    background-color: white;
     color: var(--primary);
-    font-size: 1.8rem;
-    margin-right: 0.8rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
 }
 
-.sport-details {
-    display: none;
-    padding: 1.5rem 0 0.5rem;
-    border-top: 1px solid #eee;
-    margin-top: 1rem;
+.sport-showcase-card:hover .overlay-button {
+    transform: translateY(0);
 }
 
-.sport-card.active .sport-details {
-    display: block;
+.overlay-button:hover {
+    background-color: var(--primary);
+    color: white;
 }
 
-.sport-card h3 {
-    cursor: pointer;
+.sport-info {
+    padding: 1.5rem;
+}
+
+.sport-info h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.sport-info h3 i {
+    color: var(--primary);
+}
+
+.sport-info p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.sport-highlights {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sport-highlights span {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--dark);
+}
+
+.sport-highlights span i {
+    margin-right: 0.4rem;
+    color: var(--primary);
+}
+
+/* Upcoming Events Section */
+.upcoming-events-section {
+    margin: 4rem 0;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 1.5rem;
+    min-width: 85px;
+    text-align: center;
+}
+
+.event-date .month {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-date .day {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 0.3rem;
+}
+
+.event-details {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.event-details h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+}
+
+.event-meta {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-meta i {
+    margin-right: 0.5rem;
+    color: var(--primary);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    position: relative;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content i {
+    color: var(--primary);
+    font-size: 1.5rem;
+    opacity: 0.2;
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+}
+
+.testimonial-content p {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
     display: flex;
     align-items: center;
 }
 
-.sport-card h3:after {
-    content: '\f107';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    margin-left: auto;
-    transition: var(--transition);
+.author-avatar {
+    font-size: 2rem;
+    color: #ccc;
+    margin-right: 1rem;
 }
 
-.sport-card.active h3:after {
-    transform: rotate(180deg);
+.author-info h4 {
+    margin: 0;
+    color: var(--dark);
 }
 
+.author-info p {
+    margin: 0.2rem 0 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Stats Section */
+.stats-section {
+    margin: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), #1a5276);
+    color: white;
+    padding: 3rem 1rem;
+    border-radius: 12px;
+}
+
+.stats-section h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    margin-top: 0;;
+}
+
+.stats-section h2:after {
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Join CTA Section */
+.join-cta-section {
+    margin: 4rem 0 2rem;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 3rem 1rem;
+    border-radius: 12px;
+}
+
+.join-cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.join-cta-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.join-cta-content p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -126,17 +537,36 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries specific to index page */
+/* Media queries */
 @media (max-width: 768px) {
-    .feature-box {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .event-card {
         flex-direction: column;
-        text-align: center;
-        border-left: none;
-        border-top: 4px solid var(--primary);
+    }
+    
+    .event-date {
+        flex-direction: row;
+        padding: 0.8rem;
+        min-width: auto;
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .event-date .day {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+    
+    .feature-box {
+        padding: 1.8rem 1rem;
     }
     
     .feature-icon {
-        margin-right: 0;
+        font-size: 2.2rem;
         margin-bottom: 1rem;
     }
 
@@ -148,12 +578,70 @@
         width: 35px;
         height: 35px;
     }
+    
+    .overview-section {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+    
+    .stats-container {
+        gap: 2rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+    }
+    
+    .sports-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (min-width: 992px) {
     .features-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 1.5rem;
+    }
+    
+    .testimonials-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .sports-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .events-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero-banner {
+        padding: 7rem 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
     }
 }

@@ -36,6 +36,7 @@ header p {
     line-height: 1.4;
 }
 
+/* Shared styles for navigation bars */
 nav {
     background-color: rgba(255,255,255,0.95);
     padding: 1rem 0;
@@ -43,7 +44,35 @@ nav {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: relative;
+    transition: padding 0.3s ease;
+}
+
+/* Navigation logo styles */
+.nav-logo {
+    position: absolute;
+    left: 2.5rem;
+    font-size: 1.3rem; /* Reduced font size from 1.5rem to 1.2rem */
+    font-weight: 700;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.nav-logo a {
+    color: var(--primary);
+    text-decoration: none;
+    display: block;
+}
+
+/* nav.scrolled {
+    padding: 0.7rem 0;
+} */
+
+nav.scrolled ul {
+    margin-left: 120px; /* Make room for the logo */
 }
 
 nav ul {
@@ -52,6 +81,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transition: margin 0.3s ease;
 }
 
 nav ul li {
@@ -62,14 +92,79 @@ nav ul li a {
     color: var(--dark);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 25px;
+    border-radius: 32px;
     transition: var(--transition);
     font-weight: 500;
+    background-color: transparent;
 }
 
 nav ul li a:hover {
     background-color: var(--primary);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-bottom: none;
+}
+
+/* Sports navigation */
+.sports-nav {
+    background-color: #f0f8ff;
+    padding: 0.8rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 59px; /* Adjust based on the height of the main nav */
+    z-index: 99;
+}
+
+.sports-nav-title {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sports-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sports-nav ul li {
+    margin: 0;
+}
+
+.sport-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    color: var(--primary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.sport-button:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.sport-button i {
+    font-size: 1rem;
 }
 
 .container {
@@ -93,12 +188,17 @@ h2 {
 h2:after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     width: 50px;
     height: 4px;
     background: var(--secondary);
     border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+.h2-left:after {
+    left: 2rem !important;
 }
 
 .cta-button {
@@ -166,11 +266,11 @@ footer {
 
 /* Common section styles */
 .about-section, .events-section, .join-section, .sports-section, .overview-section {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 12px;
     padding: 2.5rem;
     margin-bottom: 3rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.05); */
 }
 
 /* Media queries */
@@ -179,9 +279,34 @@ footer {
         width: 90%;
         padding: 1.5rem 0;
     }
+    
+    .sports-nav ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo {
+        font-size: 2.2rem;
+    }
+    
+    header {
+        padding: 2rem 0 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
+    nav {
+        padding: 0.8rem 0;
+    }
+    
+    .nav-logo {
+        left: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    nav.scrolled ul {
+        margin-left: 0; /* Reset margin for mobile */
+    }
+    
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -197,9 +322,10 @@ footer {
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 101;
     }
     
-    nav ul {
+    nav:not(.sports-nav) ul {
         display: block;
         max-height: 0;
         overflow: hidden;
@@ -207,30 +333,78 @@ footer {
         transition: max-height 0.5s ease, opacity 0.5s ease;
         opacity: 0;
         padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(255,255,255,0.98);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 100;
     }
     
-    nav ul.active {
+    nav:not(.sports-nav) ul.active {
         max-height: 300px;
         opacity: 1;
-        padding-top: 1rem;
+        padding: 0.8rem 0;
     }
     
-    nav ul li {
+    nav:not(.sports-nav) ul li {
         transform: translateY(-10px);
         opacity: 0;
         transition: all 0.4s ease;
         transition-delay: calc(0.1s * var(--i, 0));
-        padding-left: 2rem;
+        padding: 0.3rem 2rem;
         text-align: left;
+        width: 100%;
     }
     
-    nav ul.active li {
+    nav:not(.sports-nav) ul.active li {
         transform: translateY(0);
         opacity: 1;
+    }
+    
+    nav:not(.sports-nav) ul li a {
+        display: block;
+        width: 100%;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+
+    /* Explicitly overriding styles for sports navigation bar */
+    .sports-nav {
+        padding: 1rem 0;
+        top: 48px; /* Adjusted for smaller main nav on mobile */
+    }
+    
+    .sports-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 0 1rem;
+        width: 90%;
+        margin: 0 auto;
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+    }
+    
+    .sports-nav ul li {
+        width: 100%;
+        transform: none;
+        opacity: 1;
+        transition: none;
+        padding-left: 0;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .sport-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+        /* width: 100%; */
+        justify-content: center;
+        display: flex;
     }
 }

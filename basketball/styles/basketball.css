@@ -115,20 +115,84 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 101;
+    }
+    
+    nav {
+        position: relative;
     }
     
     nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--secondary-color);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 100;
     }
     
     nav ul.active {
-        display: flex;
+        display: block;
+        max-height: 300px;
+        opacity: 1;
+        padding: 0.8rem 0;
     }
     
     nav ul li {
-        margin: 10px 0;
+        margin: 0.5rem 2rem;
+        text-align: left;
+        width: calc(100% - 4rem);
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+    
+    /* Make sure the back to APUFit button remains visible */
+    .back-to-apufit {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .apufit-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Responsive adjustments for features */
+    .features {
+        padding: 30px 10px;
+    }
+    
+    .feature {
+        width: 100%;
+        max-width: 300px;
+        margin: 15px auto;
+    }
+    
+    /* Make hero section more responsive */
+    .hero {
+        height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
     }
 }
 
