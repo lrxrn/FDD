@@ -1,0 +1,483 @@
+/* trainings.css - Styles for the basketball trainings page */
+
+.training-section {
+    padding: 50px 20px;
+    margin-bottom: 30px;
+}
+
+.training-section:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.training-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.training-section h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.training-section h2 i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Schedule Table Styles */
+.schedule-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1.5fr 1fr;
+    padding: 15px;
+    background-color: white;
+}
+
+.schedule-row.header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.schedule-row:not(.header):nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-row > div {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.schedule-row > div.training-day {
+    cursor: default;
+}
+
+.schedule-row:not(.header) > div {
+    cursor: default;
+}
+
+.schedule-row:not(.header):hover {
+    background-color: inherit;
+}
+
+.schedule-row:not(.header):nth-child(even):hover {
+    background-color: #f9f9f9;
+}
+
+/* Program Cards Styles */
+.program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.program-card {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.program-icon {
+    background-color: var(--primary-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.program-icon i {
+    font-size: 30px;
+    color: white;
+}
+
+.program-card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.program-card p {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.program-features {
+    list-style: none;
+    padding: 0;
+}
+
+.program-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.program-features li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Coaches Gallery */
+.coaches-gallery {
+    display: none;
+}
+
+/* Calendar Component */
+.calendar-container {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    box-sizing: border-box; /* Add box-sizing to container */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box; /* Ensure header respects container padding */
+    overflow: hidden; /* Prevent content overflow */
+    max-width: 100vw; /* Limit width to viewport width */
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: opacity 0.3s;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.calendar-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    white-space: nowrap; /* Keep month name on one line */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    flex: 1; /* Allow header text to take remaining space */
+    padding: 0 10px; /* Add some spacing around text */
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #f9f9f9;
+    padding: 5px;
+}
+
+.day {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 3px;
+    transition: all 0.2s;
+}
+
+.day:hover:not(.empty) {
+    background-color: #f0f0f0;
+}
+
+.day.empty {
+    cursor: default;
+}
+
+.day.today {
+    background-color: var(--highlight-color);
+    color: white;
+    font-weight: bold;
+}
+
+.day.has-event {
+    position: relative;
+    font-weight: bold;
+}
+
+.day.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.event-list {
+    padding: 20px;
+    background-color: white;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.event-list h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: var(--secondary-color);
+}
+
+.event {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.event-date {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 15px;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-details {
+    flex-grow: 1;
+}
+
+.event-details h5 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+}
+
+.event-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.event-details p i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* Responsive Calendar */
+@media (max-width: 768px) {
+    .calendar-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .weekdays, .calendar-days {
+        font-size: 0.9rem;
+    }
+    
+    .day {
+        height: 35px;
+    }
+}
+
+/* Add additional responsive rule for larger screens */
+@media (min-width: 1200px) {
+    .calendar-container {
+        grid-template-columns: 3fr 2fr;
+        max-width: 100%;
+    }
+    
+    .calendar-header {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%; /* Ensure header doesn't exceed container width */
+    }
+}
+
+/* Registration Steps */
+.registration-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.registration-steps {
+    margin-bottom: 40px;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.step-number {
+    background-color: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+.step-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.step-content p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Active nav link */
+nav ul li a.active {
+    color: var(--highlight-color);
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .program-cards, .coaches-gallery {
+        gap: 20px;
+    }
+    
+    .program-card, .coach-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-row {
+        grid-template-columns: 1fr;
+        text-align: left;
+        padding: 15px 10px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .schedule-row.header {
+        display: none;
+    }
+    
+    .schedule-row > div {
+        padding: 8px 5px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .schedule-row > div:before {
+        content: attr(class) ": ";
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-right: 10px;
+        min-width: 80px;
+        display: inline-block;
+    }
+    
+    .program-card, .coach-card {
+        width: 100%;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
