@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule - APUFit Badminton Club</title>
+  <link rel="stylesheet" href="schedule.css" />
+  <script src="schedule.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>🏸 APUFit Badminton Club</h1>
+  <nav class="creative-nav">
+    <ul>
+      <li><a href="index.html"><span>Home</span></a></li>
+      <li><a href="about.html"><span>About</span></a></li>
+      <li><a href="schedule.html" class="active"><span>Schedule</span></a></li>
+      <li><a href="tournament.html"><span> Tournaments </span></a></li>
+      <li><a href="team.html"><span>Meet the Team</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Weekly Schedule</h2>
+  <p>Check trainer and court availability by selecting a day below!</p>
+</section>
+
+<section class="availability" id="trainer-availability">
+  <h2>Trainer Availability</h2>
+  <div class="days">
+    <button onclick="showTrainer('monday')">Monday</button>
+    <button onclick="showTrainer('tuesday')">Tuesday</button>
+    <button onclick="showTrainer('wednesday')">Wednesday</button>
+    <button onclick="showTrainer('thursday')">Thursday</button>
+    <button onclick="showTrainer('friday')">Friday</button>
+  </div>
+
+
+    <div id="monday-trainer" class="tab-content trainer-tab-content active">
+  <div class="trainer-block">
+    <img alt="John Doe" src="John%20Doe.jpg">
+    <div>
+      <h3>John Doe</h3>
+      <p>Specializing in footwork and speed.</p>
+      <p><strong>Time:</strong> 10am – 1pm</p>
+    </div>
+  </div>
+  <div class="trainer-block">
+    <img alt="Jane Smith" src="Jane%20Smith.jpg">
+    <div>
+      <h3>Jane Smith</h3>
+      <p>Smash technique and strategy expert.</p>
+      <p><strong>Time:</strong> 1pm – 4pm</p>
+    </div>
+  </div>
+  <div class="book-now-wrapper">
+    <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+  </div>
+</div> 
+
+
+<div id="tuesday-trainer" class="tab-content trainer-tab-content">
+  <div class="trainer-block">
+    <img alt="Liam Wong" src="Liam%20Wong.jpg">
+    <div>
+      <h3>Liam Wong</h3>
+      <p>Agility drills and conditioning.</p>
+      <p><strong>Time:</strong> 11am – 2pm</p>
+    </div>
+  </div>
+  <div class="book-now-wrapper">
+    <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+  </div>
+</div>
+      <div id="tuesday-trainer" class="tab-content trainer-tab-content">
+      <div class="trainer-block">
+        <img alt="LiamWong" src="Liam%20Wong.jpg">
+        <div>
+          <h3>Liam Wong</h3>
+          <p>Agility drills and conditioning.</p>
+          <p><strong>Time:</strong> 11am – 2pm</p>
+        </div>
+      </div>
+      <div class="book-now-wrapper">
+        <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div id="wednesday-trainer" class="tab-content trainer-tab-content">
+      <div class="trainer-block">
+          <img alt="AishaTan" src="Aisha%20Tan.jpg">
+        <div>
+          <h3>Aisha Tan</h3>
+          <p>Net play specialist, 1-on-1 focus.</p>
+          <p><strong>Time:</strong> 2pm – 5pm</p>
+        </div>
+      </div>
+      <div class="book-now-wrapper">
+        <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div id="thursday-trainer" class="tab-content trainer-tab-content">
+      <div class="trainer-block">
+        <img alt="KevinLee" src="Kevin%20Lee.jpg">
+        <div>
+          <h3>Kevin Lee</h3>
+          <p>Double play strategies and teamwork.</p>
+          <p><strong>Time:</strong> 10am – 1pm</p>
+        </div>
+      </div>
+      <div class="book-now-wrapper">
+        <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div id="friday-trainer" class="tab-content trainer-tab-content">
+      <div class="trainer-block">
+        <img alt="ClaraNg" src="Clara%20Ng.jpg">
+        <div>
+          <h3>Clara Ng</h3>
+          <p>Advanced rallies and conditioning.</p>
+          <p><strong>Time:</strong> 3pm – 6pm</p>
+        </div>
+      </div>
+      <div class="book-now-wrapper">
+        <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+      </div>
+    </div>
+   </div>
+
+</section>
+
+<section class="schedule-tabs">
+  <h2>🏟 Court Availability</h2>
+  <div class="tab-buttons">
+    <button class="court-tab-button active" data-target="monday-court">Monday</button>
+    <button class="court-tab-button" data-target="tuesday-court">Tuesday</button>
+    <button class="court-tab-button" data-target="wednesday-court">Wednesday</button>
+    <button class="court-tab-button" data-target="thursday-court">Thursday</button>
+    <button class="court-tab-button" data-target="friday-court">Friday</button>
+    <button class="court-tab-button" data-target="saturday-court">Saturday</button>
+  </div>
+
+  <!-- Sample Update for Monday Court -->
+  <div id="monday-court" class="tab-content court-tab-content active">
+    <div class="court-block">
+      <img alt="Court" src="court.jpeg">
+      <div>
+        <h3>Available Slots</h3>
+        <ul>
+          <li>9am – 12pm</li>
+          <li>1pm – 4pm</li>
+          <li>5pm – 7pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="book-now-wrapper">
+      <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+    </div>
+  </div>
+<div id="tuesday-court" class="tab-content court-tab-content">
+    <div class="court-block">
+      <img alt="Court" src="court.jpeg">
+      <div>
+        <h3>Available Slots</h3>
+        <ul>
+          <li>8am – 10am</li>
+          <li>10am – 12pm</li>
+          <li>1pm – 3pm</li>
+          <li>4pm – 6pm</li>
+          <li>7pm – 9pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="book-now-wrapper">
+      <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+    </div>
+  </div>
+
+  <div id="wednesday-court" class="tab-content court-tab-content">
+    <div class="court-block">
+      <img alt="Court" src="court.jpeg">
+      <div>
+        <h3>Available Slots</h3>
+        <ul>
+          <li>8am – 11am</li>
+          <li>12pm – 2pm</li>
+          <li>3pm – 5pm</li>
+          <li>6pm – 8pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="book-now-wrapper">
+      <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+    </div>
+  </div>
+
+  <div id="thursday-court" class="tab-content court-tab-content">
+    <div class="court-block">
+      <img alt="Court" src="court.jpeg">
+      <div>
+        <h3>Available Slots</h3>
+        <ul>
+          <li>9am – 11am</li>
+          <li>12pm – 2pm</li>
+          <li>3pm – 5pm</li>
+          <li>6pm – 9pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="book-now-wrapper">
+      <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+    </div>
+  </div>
+
+  <div id="friday-court" class="tab-content court-tab-content">
+    <div class="court-block">
+      <img alt="Court" src="court.jpeg">
+      <div>
+        <h3>Available Slots</h3>
+        <ul>
+          <li>8am – 10am</li>
+          <li>11am – 1pm</li>
+          <li>2pm – 4pm</li>
+          <li>5pm – 7pm</li>
+          <li>8pm – 10pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="book-now-wrapper">
+      <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+    </div>
+  </div>
+
+  <div id="saturday-court" class="tab-content court-tab-content">
+    <div class="court-block">
+      <img alt="Court" src="court.jpeg">
+      <div>
+        <h3>Available Slots</h3>
+        <ul>
+          <li>9am – 11am</li>
+          <li>12pm – 2pm</li>
+          <li>3pm – 5pm</li>
+          <li>6pm – 8pm</li>
+          <li>9pm – 11pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="book-now-wrapper">
+      <button class="book-btn" onclick="location.href='CourtBook.html'">Book Now</button>
+    </div>
+  </div>
+  
+</section>
+
+
+<footer>
+  <p>&copy; 2025 APUFit Badminton Club</p>
+</footer>
+</body>
+</html>

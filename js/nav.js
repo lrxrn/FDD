@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
         logoLink.innerHTML = originalLogo.innerHTML;
         navLogo.appendChild(logoLink);
         
-        navLogo.style.opacity = '0';
-        navLogo.style.visibility = 'hidden';
-        
         // Insert the nav logo at the beginning of the sports navigation bar
         sportsNav.insertBefore(navLogo, sportsNav.firstChild);
         
         // Initial position setting
         updateMainNavPosition();
+        
+        // Variable to track if logo is currently animating
+        let isLogoAnimating = false;
         
         // Function to handle scroll event
         function handleScroll() {
@@ -50,24 +50,53 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Check if we've scrolled past the header
             if (scrollPosition > headerBottom - sportsNav.offsetHeight) {
-                // Show the nav logo and add scrolled class to sports nav only
-                navLogo.style.opacity = '1';
-                navLogo.style.visibility = 'visible';
-                sportsNav.classList.add('scrolled');
+                // Show the logo
+                if (navLogo.classList.contains('disappearing') || getComputedStyle(navLogo).opacity === '0') {
+                    // Remove disappearing class first if it exists
+                    navLogo.classList.remove('disappearing');
+                    
+                    // Make element visible before starting transitions
+                    navLogo.style.visibility = 'visible';
+                    
+                    // Trigger reflow to ensure the removal of the class takes effect before adding scrolled
+                    void navLogo.offsetWidth;
+                    
+                    // Add scrolled class to trigger the appearance animation
+                    sportsNav.classList.add('scrolled');
+                }
+            } else if (!isLogoAnimating && (sportsNav.classList.contains('scrolled') || getComputedStyle(navLogo).opacity !== '0')) {
+                // Start the disappearing animation
+                isLogoAnimating = true;
                 
-                // No longer adding scrolled class to main nav
-            } else {
-                // Hide the nav logo and remove scrolled class from sports nav
-                navLogo.style.opacity = '0';
-                navLogo.style.visibility = 'hidden';
+                // Add the disappearing class to trigger the animation
+                navLogo.classList.add('disappearing');
                 sportsNav.classList.remove('scrolled');
                 
-                // No longer removing scrolled class from main nav
+                // Wait for animation to complete before fully hiding
+                setTimeout(() => {
+                    // Only hide completely if we're still supposed to be hidden
+                    if (scrollPosition <= headerBottom - sportsNav.offsetHeight) {
+                        navLogo.style.visibility = 'hidden';
+                    } else {
+                        // If we've scrolled back down, revert to visible state
+                        navLogo.classList.remove('disappearing');
+                        sportsNav.classList.add('scrolled');
+                    }
+                    isLogoAnimating = false;
+                }, 400); // Match this timing with CSS transition duration
             }
             
             // Always update the position after any potential height change
             updateMainNavPosition();
         }
+        
+        // Add transition end listener to the logo
+        navLogo.addEventListener('transitionend', function(e) {
+            if (e.propertyName === 'transform' || e.propertyName === 'opacity' || 
+                e.propertyName === 'max-height') {
+                updateMainNavPosition();
+            }
+        });
         
         // Use a MutationObserver to detect any changes to the sports nav
         // that might affect its height (like adding/removing classes or content)

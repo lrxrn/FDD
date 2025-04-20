@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="'en">
+
+<head>
+      <meta charset= "UTF-8">
+      <meta name ="viewport" content="width=device width, intitial-scale =1.0">
+      <title>Training Slot Booking</title>
+	  <link rel="stylesheet" href="pickSlotCSS.css">
+</head>
+
+<body>
+	<header>
+		<h1> Book Your Training Slot </h1>
+	</header>
+	<section id="information">
+		<h2> Training Slot Information </h2>
+		<p> Training slots are available for every <b> Monday, Wednesday, and Saturday</b>
+		</p>
+		<p> Each day has 2 slots: <b>9:00 - 10:00 AM </b> and <b>6:00 - 7:00PM.</b></p>
+	</section>     <section id="calendar">
+		<h2> Select A Date </h2>
+		<input type="date" id="trainingDate">
+	</section>
+	<section id="slots">
+		<h2> Available Slots</h2>
+		<div class="slot" data-time="09:00">09:00 - 10:00</div>
+		<div class="slot" data-time="18:00">18:00 - 19:00</div>
+	</section>
+	<script src="pickSlot.js"></script>
+</body>
+
+</html>

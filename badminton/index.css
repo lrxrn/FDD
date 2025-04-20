@@ -1,0 +1,94 @@
+﻿body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.main-header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+  background-color: #e0f7fa;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  width: 30%;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cta {
+  background-color: #ffc107;
+  text-align: center;
+  padding: 30px;
+}
+
+.cta .btn {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cta .btn:hover {
+  background-color: #005fa3;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #0077cc;
+  color: white;
+}

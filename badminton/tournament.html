@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3v3 Tournament | APUFit Badminton Club</title>
+  <link rel="stylesheet" href="tournament.css">
+  <script src="tournament.js" defer></script>
+  <style type="text/css">
+.auto-style1 {
+	font-family: "Bahnschrift SemiBold Condensed";
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>🏸 APUFit Badminton Club</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Training Schedule</a></li>
+        <li><a href="tournament.html" class="active">Tournaments</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="featured-tournaments">
+      <h2 class="auto-style1">🏆 Featured Tournaments</h2>
+      <div class="cards-container">
+        <!-- Tournament 1 -->
+        <div class="card">
+            <img alt="Winter Smash" src="tournament1.jpg">
+            <div class="card-info">
+            <h3>Winter Smash 2025</h3>
+            <p>2v2 | Sat, Apr 20, 5:00 PM</p>
+            <span>Slots: 16/24</span>
+            <button class="join-btn" data-format="2">Join Tournament</button>
+          </div>
+        </div>
+
+        <!-- Tournament 2 -->
+        <div class="card">
+            <img alt="Doubles" src="tournament4.jpg">
+            <div class="card-info">
+            <h3>Doubles Showdown</h3>
+            <p>2v2 | Wed, May 1, 4:30 PM</p>
+            <span>Slots: 10/16</span>
+            <button class="join-btn" data-format="2">Join Tournament</button>
+          </div>
+        </div>
+
+        <!-- Tournament 3 -->
+        <div class="card">
+            <img alt="Solo Smash" src="tournament2.jpg">
+            <div class="card-info">
+            <h3>Solo Smash</h3>
+            <p>1v1 | Sun, May 12, 3:00 PM</p>
+            <span>Slots: 22/32</span>
+            <button class="join-btn" data-format="1">Join Tournament</button>
+          </div>
+        </div>
+
+        <!-- Tournament 4 -->
+        <div class="card">
+            <img alt="QuickServe" src="tournament3.jpg">
+            <div class="card-info">
+            <h3>Quick Serve Showdown</h3>
+            <p>1v1 | Fri, Apr 26, 6:30 PM</p>
+            <span>Slots: 18/20</span>
+            <button class="join-btn" data-format="1">Join Tournament</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Popup -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Register</h2>
+      <form id="teamForm">
+        <label>Team Name:</label>
+        <input type="text" name="teamName" required>
+
+        <div id="playerFields">
+          <!-- Player fields will be inserted here dynamically -->
+        </div>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
