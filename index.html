@@ -25,26 +25,27 @@
         <p>Health & Wellness at Asia Pacific University</p>
     </header>
 
-    <nav>
+    <!-- Sports Navigation Bar - Now on top with mobile menu toggle -->
+    <nav class="sports-nav">
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
-        <ul>
-            <li style="--i: 1;"><a href="about.html">About</a></li>
-            <li style="--i: 2;"><a href="sports.html">Sports</a></li>
-            <li style="--i: 3;"><a href="events.html">Events</a></li>
-            <li style="--i: 4;"><a href="join.html">Join Us</a></li>
-        </ul>
-    </nav>
-
-    <!-- Sports Navigation Bar -->
-    <nav class="sports-nav">
         <div class="sports-nav-title">Our Sports Divisions</div>
         <ul>
             <li><a href="basketball/index.html" class="sport-button"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
             <li><a href="football/index.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
             <li><a href="badminton/index.html" class="sport-button"><i class="fas fa-table-tennis"></i> Badminton</a></li>
             <li><a href="swimming/index.html" class="sport-button"><i class="fas fa-swimming-pool"></i> Swimming</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Navigation Bar - Now below sports nav without mobile toggle -->
+    <nav>
+        <ul>
+            <li style="--i: 1;"><a href="about.html">About</a></li>
+            <li style="--i: 2;"><a href="sports.html">Sports</a></li>
+            <li style="--i: 3;"><a href="events.html">Events</a></li>
+            <li style="--i: 4;"><a href="join.html">Join Us</a></li>
         </ul>
     </nav>
 
@@ -327,9 +328,9 @@
     </footer>
 
     <script>
-        // Mobile menu toggle functionality
+        // Mobile menu toggle functionality - now targets main nav from sports nav toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.querySelector('nav ul');
+        const mainNav = document.querySelector('nav:not(.sports-nav) ul');
         
         if (mobileMenuToggle && mainNav) {
             mobileMenuToggle.addEventListener('click', () => {
@@ -342,7 +343,7 @@
             
             // Close menu when clicking outside
             document.addEventListener('click', (e) => {
-                if (!e.target.closest('nav') && mainNav.classList.contains('active')) {
+                if (!e.target.closest('.mobile-menu-toggle') && !e.target.closest('nav:not(.sports-nav)') && mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
                     mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 }

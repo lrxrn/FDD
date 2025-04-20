@@ -6,6 +6,7 @@
     <title>APUFit Basketball - Asia Pacific University</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="styles/basketball.css">
 </head>
 <body>
@@ -14,10 +15,22 @@
         <p>Basketball Division @ APUFit</p>
     </header>
     
-    <nav>
+    <!-- Sports Navigation Bar - Now on top with mobile menu toggle -->
+    <nav class="sports-nav">
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
+        <div class="sports-nav-title">Our Sports Divisions</div>
+        <ul>
+            <li><a href="index.html" class="sport-button active"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+            <li><a href="../football/index.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
+            <li><a href="../badminton/index.html" class="sport-button"><i class="fas fa-table-tennis"></i> Badminton</a></li>
+            <li><a href="../swimming/index.html" class="sport-button"><i class="fas fa-swimming-pool"></i> Swimming</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Navigation Bar - Now below sports nav without mobile toggle -->
+    <nav>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -75,18 +88,16 @@
                 <a href="https://www.youtube.com/c/APUFitClub" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
             <p>&copy; 2025 APUFit Basketball - Asia Pacific University</p>
-            <div class="footer-buttons">
-                <a href="../contactUs.html" class="contact-button">
-                    <i class="fas fa-envelope"></i> Contact Us
-                </a>
-            </div>
+            <a href="../contactUs.html" class="contact-button">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle functionality
+        // Mobile menu toggle functionality - now targets main nav from sports nav toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.querySelector('nav ul');
+        const mainNav = document.querySelector('nav:not(.sports-nav) ul');
         
         if (mobileMenuToggle && mainNav) {
             mobileMenuToggle.addEventListener('click', () => {
@@ -99,7 +110,7 @@
             
             // Close menu when clicking outside
             document.addEventListener('click', (e) => {
-                if (!e.target.closest('nav') && mainNav.classList.contains('active')) {
+                if (!e.target.closest('.mobile-menu-toggle') && !e.target.closest('nav:not(.sports-nav)') && mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
                     mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 }
