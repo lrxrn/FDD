@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Events</title>
+  <style>
+    body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background: url('Screenshot%202025-04-20%20220350.png') no-repeat fixed center;
+	background-size: cover;
+	color: #fff;
+}
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .event {
+      border-bottom: 1px solid #fff;
+      padding: 15px 0;
+    }
+    .event:last-child {
+      border-bottom: none;
+    }
+    .event h3 {
+      margin: 0;
+      color: #ffcc00;
+    }
+    .event p {
+      margin: 5px 0;
+    }
+    .countdown {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Upcoming Events</header>
+
+  <nav>
+      <a href="default.html">Home</a> <a href="events.html">Events</a>
+	  <a href="training.html">Training</a> <a href="tournements.html">Cup</a>
+	  <a href="history.html">History</a> <a href="aboutus.html">About Us</a>
+  </nav>
+
+  <div class="container">
+    <div class="countdown">
+      Next Match: Real Madrid vs FC Barcelona <br>
+      <span id="timer"></span>
+    </div>
+
+    <div class="event">
+      <h3>⚽ Local Derby Match</h3>
+      <p><strong>Date:</strong> April 25, 2025</p>
+      <p><strong>Location:</strong> Greenfield Stadium</p>
+      <p>Come and support your team in this exciting local rivalry!</p>
+    </div>
+
+    <div class="event">
+      <h3>🏆 Regional Cup Quarterfinal</h3>
+      <p><strong>Date:</strong> May 10, 2025</p>
+      <p><strong>Location:</strong> Lions Arena</p>
+      <p>Watch your team compete for a place in the semifinals!</p>
+    </div>
+
+    <div class="event">
+      <h3>🎉 Fan Meet and Greet</h3>
+      <p><strong>Date:</strong> May 20, 2025</p>
+      <p><strong>Location:</strong> Clubhouse</p>
+      <p>Meet the players, get autographs, and enjoy a day full of activities.</p>
+    </div>
+  </div>
+
+  <script>
+    const matchDate = new Date("April 25, 2025 17:00:00").getTime();
+    const timer = document.getElementById("timer");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = matchDate - now;
+
+      if (distance < 0) {
+        timer.innerHTML = "Match has started!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>

@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Swimming - APUFit</title>
+    <title>About Us - APUFit Swimming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="styles/swimming.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/about.css">
 </head>
 <body>
@@ -15,39 +17,56 @@
         <p>Swimming Division @ APUFit</p>
     </header>
 
+    <!-- Sports Navigation Bar -->
+    <nav class="sports-nav">
+        <div class="nav-logo">
+            <a href="../index.html">APUFit</a>
+        </div>
+        <div class="sports-nav-title">Our Sports</div>
+        <ul>
+            <li><a href="../basketball/index.html" class="sport-button"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+            <li><a href="../football/default.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
+            <li><a href="../badminton/index.html" class="sport-button"><i class="fas fa-shuttlecock"></i> Badminton</a></li>
+            <li><a href="home.html" class="sport-button" style="background-color: var(--primary-color); color: white;"><i class="fas fa-swimmer"></i> Swimming</a></li>
+        </ul>
+    </nav>
+
     <nav>
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="swimming.html" class="active">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="join-us.html">Join Us</a></li>
+            <li style="--i: 1;"><a href="home.html">Home</a></li>
+            <li style="--i: 2;"><a href="swimming.html" class="active">About</a></li>
+            <li style="--i: 3;"><a href="team.html">Team</a></li>
+            <li style="--i: 4;"><a href="schedule.html">Schedule</a></li>
+            <li style="--i: 5;"><a href="join-us.html">Join Us</a></li>
         </ul>
     </nav>
 
-    <div class="about-section">
-        <h1>About APUFit Swimming</h1>
+    <div class="container">
+        <div class="about-section">
+            <h1>About APUFit Swimming</h1>
 
-        <div class="about-content">
-            <div class="about-image">
-                <img src="../images/swimming-team.jpg" alt="APUFit Swimming Team">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../images/swimming-team.jpg" alt="APUFit Swimming Team">
+                </div>
+
+                <div class="about-text">
+                    <h2>🏊‍♂️ About Us</h2>
+
+                    <p>Welcome to APUFit Swimming Club — where passion meets the water! We're a vibrant, community-focused swimming club dedicated to promoting the joy of swimming for all ages and skill levels. Whether you're diving in for the first time, training for competition, or just looking to stay active and have fun, we have a place for you.</p>
+
+                    <p>Founded in 2020, our club has quickly grown into a hub for swimming enthusiasts. We offer a range of programs, from beginner lessons to advanced training sessions, all led by our experienced coaching staff. Our mission is to foster a love for swimming while promoting health, fitness, and teamwork.</p>
+
+                </div>
             </div>
 
-            <div class="about-text">
-                <h2>🏊‍♂️ About Us</h2>
-
-                <p>Welcome to APUFit Swimming Club — where passion meets the water! We’re a vibrant, community-focused swimming club dedicated to promoting the joy of swimming for all ages and skill levels. Whether you're diving in for the first time, training for competition, or just looking to stay active and have fun, we have a place for you.</p>
-
-                <p>Founded in 2020, our club has quickly grown into a hub for swimming enthusiasts. We offer a range of programs, from beginner lessons to advanced training sessions, all led by our experienced coaching staff. Our mission is to foster a love for swimming while promoting health, fitness, and teamwork.</p>
-
-            </div>
-        </div>
-
-        <p>At APUFit Swimming Club, we offer:</p>
-                <ul>
+            <div class="offerings-section">
+                <h2>What We Offer</h2>
+                <p>At APUFit Swimming Club, we provide a comprehensive swimming experience:</p>
+                <ul class="offerings-list">
                     <li><strong>Professional coaching</strong> for beginners, intermediates, and advanced swimmers</li>
                     <li><strong>Regular training sessions</strong> to improve technique and endurance</li>
                     <li><strong>Competitive opportunities</strong> for those looking to take their skills to the next level</li>
@@ -57,102 +76,117 @@
                     <li><strong>Wellness and fitness programs</strong> to enhance overall health</li>
                 </ul>
 
-        <p>We welcome players of all skill levels, from beginners looking to learn the basics to experienced athletes aiming to compete at higher levels.</p>
+                <p>We welcome players of all skill levels, from beginners looking to learn the basics to experienced athletes aiming to compete at higher levels.</p>
+            </div>
 
-        <div class="mission-vision">
-            <h2>Our Mission & Vision</h2>
-            <div class="mission-vision-content">
-                <div class="mission">
-                    <p><strong>Mission</strong></p>
-                    <p>To provide a safe and inclusive environment for swimmers of all levels to develop their skills, build confidence, and foster a lifelong love for the sport.</p>
-                </div>
-                <div class="vision">
-                    <p><strong>Vision</strong></p>
-                    <p>To be recognized as the leading swimming club in Malaysia, known for our commitment to excellence, community engagement, and athlete development.</p>
+            <div class="mission-vision">
+                <h2>Our Mission & Vision</h2>
+                <div class="mission-vision-content">
+                    <div class="mission">
+                        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To provide a safe and inclusive environment for swimmers of all levels to develop their skills, build confidence, and foster a lifelong love for the sport.</p>
+                    </div>
+                    <div class="vision">
+                        <div class="vision-icon"><i class="fas fa-binoculars"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To be recognized as the leading swimming club in Malaysia, known for our commitment to excellence, community engagement, and athlete development.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="team-section">
-            <h2>Meet our Coaching Team</h2>
-            <p>With years of expertise and a love for the sport, our coaches are here to support your swimming journey.</p>
+            <div class="coaches-section">
+                <h2>Meet our Coaching Team</h2>
+                <p>With years of expertise and a love for the sport, our coaches are here to support your swimming journey.</p>
 
-            <div class="coaches">
-                <div class="coach-card">
-                    <div class="coach-card-inner">
-                        <div class="coach-photo">
-                            <img src="../images/swimming-coach1.jpg" alt="Coach Michael">
+                <div class="coaches">
+                    <div class="coach-card">
+                        <div class="coach-card-inner">
+                            <div class="coach-photo">
+                                <img src="../images/swimming-coach1.jpg" alt="Sarah Lim">
+                            </div>
+                            <div class="coach-info">
+                                <h3>Sarah Lim</h3>
+                                <p class="title">Head Coach</p>
+                                <p class="experience">12 Years of Experience</p>
+                                <p>Specializes in competitive swimming and athlete development.</p>
+                                <div class="coach-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="coach-info">
-                            <h3>Sarah Lim</h3>
-                            <p>Head Coach</p>
-                            <p>12 Years of Experience.</p>
-                            <p>Specializes in competitive swimming and athlete development.</p>
-                            <div class="coach-social">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <div class="coach-card">
+                        <div class="coach-card-inner">
+                            <div class="coach-photo">
+                                <img src="../images/swimming-coach2.jpg" alt="Daniel Wong">
+                            </div>
+                            <div class="coach-info">
+                                <h3>Daniel Wong</h3>
+                                <p class="title">Junior Development Coach</p>
+                                <p class="experience">7 Years of Experience</p>
+                                <p>Focuses on youth development and swimming fundamentals.</p>
+                                <div class="coach-social">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="coach-card">
-                    <div class="coach-card-inner">
-                        <div class="coach-photo">
-                            <img src="../images/swimming-coach2.jpg" alt="Coach Sarah">
-                        </div>
-                        <div class="coach-info">
-                            <h3>Daniel Wong</h3>
-                            <p>Junior Development Coach</p>
-                            <p>7 Years of Experience.</p>
-                            <p>Focuses on youth development and swimming fundamentals.</p>
-                            <div class="coach-social">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+            <div class="achievements-section">
+                <h2>Our Achievements</h2>
+                <p>Over the years, APUFit Swimming has achieved numerous milestones that demonstrate our commitment to excellence.</p>
+
+                <div class="achievement-cards">
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Outstanding New Club Award</h3>
+                        <p>Recognized as the <span>Best Emerging Sports Club of 2023</span> by the Malaysian University Sports Federation</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                        <h3>Record Breakers</h3>
+                        <p>Set <span>8 new intercollegiate swim records</span> in freestyle, butterfly, and relay events in 2024</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-globe-asia"></i></div>
+                        <h3>International Exposure</h3>
+                        <p>Sent a delegation to the <span>2023 ASEAN University Swimming Invitational</span> in Thailand, earning <span>multiple top-10 finishes</span></p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>Coaching Excellence</h3>
+                        <p>Our Head Coach received the <span>2023 Excellence in Coaching Award</span> for outstanding contributions to university-level swimming</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                        <h3>Inclusive Sports Program</h3>
+                        <p>Launched a <span>Learn-to-Swim program for students with disabilities,</span> benefiting over <span>50 participants</span> in its first year</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>Leadership in Sports Events</h3>
+                        <p>Successfully hosted the <span>2024 KL Varsity Swim Meet,</span> welcoming over <span>300 student-athletes</span> from across Malaysia.</p>
                     </div>
                 </div>
-
             </div>
-        </div>
-
-        <div class="achievements">
-            <h2>Our Achievements</h2>
-            <p>Over the years, APUFit Swimming has achieved numerous milestones that demonstrate our commitment to excellence.</p>
-
-            <div class="achievement-list">
-                <div class="achievement-card">
-                    <h3>Outstanding New Club Award</h3>
-                    <p>Recognized as the <span>Best Emerging Sports Club of 2023</span> by the Malaysian University Sports Federation</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Record Breakers</h3>
-                    <p>Set <span>8 new intercollegiate swim records</span> in freestyle, butterfly, and relay events in 2024</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>International Exposure</h3>
-                    <p>Sent a delegation to the <span>2023 ASEAN University Swimming Invitational</span> in Thailand, earning <span>multiple top-10 finishes</span></p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Coaching Excellence</h3>
-                    <p>Our Head Coach received the <span>2023 Excellence in Coaching Award</span> for outstanding contributions to university-level swimming</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Inclusive Sports Program</h3>
-                    <p>Launched a <span>Learn-to-Swim program for students with disabilities,</span> benefiting over <span>50 participants</span> in its first year</p>
-                </div>
-
-                <div class="achievement-card">
-                    <h3>Leadership in Sports Events</h3>
-                    <p>Successfully hosted the <span>2024 KL Varsity Swim Meet,</span> welcoming over <span>300 student-athletes</span> from across Malaysia.</p>
-                </div>
+            
+            <div class="cta-section">
+                <h2>Join Our Swimming Community</h2>
+                <p>Ready to dive in? We welcome swimmers of all levels to join our vibrant community!</p>
+                <a href="join-us.html" class="cta-button">Join APUFit Swimming</a>
             </div>
         </div>
     </div>
@@ -178,11 +212,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-    </script>
+    <!-- Use only the external nav.js file for navigation functionality -->
+    <script src="js/nav.js"></script>
 </body>
 </html>

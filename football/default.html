@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Football Club</title>
+  <style>
+    body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: url('C:\Users\HP\Documents\My Web Sites\the web\images\BBVA⛰️☁️.jpeg') no-repeat center center fixed;
+	background-size: cover;
+	color: white;
+	background-image: url('images/BBVA⛰️☁️.jpeg');
+}
+
+    /* Navigation Bar */
+    .navbar {
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 15px 0;
+	z-index: 999;
+}
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      background-color: #ffcc00;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Main Content */
+    .content {
+      margin-top: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 900px;
+      width: 90%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #ffcc00;
+    }
+
+    .box p {
+      line-height: 1.6;
+    }
+
+    /* News Boxes */
+    .news-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .news-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .news-box h3 {
+      color: #ffcc00;
+      margin-top: 0;
+    }
+
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffcc;
+      text-align: center;
+    }
+  .auto-style2 {
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 15px;
+	padding: 25px;
+	max-width: 900px;
+	width: 90%;
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+	margin-left: 0px;
+}
+.auto-style3 {
+	font-family: "Arial Black";
+	font-size: xx-large;
+	color: red;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+      <strong>MAIN CLUB </strong>&nbsp;<a href="#">Home</a>
+    <a href="events.html">Events</a> <a href="training.html">Training</a>
+	  <a href="tournements.html">Cup</a> <a href="history.html">History</a>
+	  <a href="aboutus.html">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+
+  <!-- Main Page Content -->
+  <div class="content">
+    <div class="box">
+      <h2>Introduction</h2>
+      <p>Welcome to our local football club! We are dedicated to training, discipline, and teamwork. Our club brings together athletes of all ages and backgrounds to celebrate the sport and build strong community ties.</p>
+    </div>
+
+    <div class="box">
+      <h2>Club Highlights</h2>
+      <p>🏆 Winners of the Regional Youth Cup 2023<br>
+         ⚽ Weekly training sessions with certified coaches<br>
+         🌍 Community outreach and football development programs<br>
+         🧢 Open tryouts for new talents every season</p>
+    </div>
+
+    <!-- Countdown Box -->
+    <div class="auto-style2" style="width: 100%">
+      <h2>Next Match:&nbsp;&nbsp; </h2>
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Real Madrid vs FC Barcelona&nbsp; </h2>
+		<p>&nbsp;</p>
+		<p>
+		<img alt="real madrid" height="234" src="images/Screenshot%202025-04-17%20004314.png" width="223">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img alt="fc barcalona" height="234" src="Screenshot%202025-04-17%20004349.png" width="223"></span></p>
+		<p>&nbsp;</p>
+      <p class="countdown" id="countdown">Loading countdown...</p>
+    </div>
+
+    <!-- News Section -->
+  </div>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    const countdownElement = document.getElementById("countdown");
+    const matchDate = new Date("June 1, 2025 20:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = matchDate - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "The match has started!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Skills</title>
+  <style>
+    body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background-size: cover;
+	color: #fff;
+	background-image: url('Screenshot%202025-04-20%20220732.png');
+}
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+	perspective: 1000px;
+	background-image: url('Screenshot 2025-04-17 010918.png');
+}
+    .card-inner {
+	background-position: center;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	background-repeat: no-repeat;
+	background-image: url('Screenshot 2025-04-17 012845.png');
+}
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      color: #fff;
+    }
+    .card-front {
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-image: url('Screenshot 2025-04-17 010918.png');
+}
+    .card-back {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: rotateY(180deg);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Training Skills</header>
+
+  <nav>
+      <a href="default.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="training.html">Training</a>
+    <a href="tournements.html">Cup</a>
+    <a href="history.html">History</a>
+    <a href="aboutus.html">About Us</a>
+  </nav>
+
+  <div class="skills-container">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="left: 0px; top: 2px; height: 100%;">
+          Dribbling
+        </div>
+        <div class="card-back">
+          Mastering dribbling helps you maintain control while moving and creates space from defenders.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner" style="left: 0px; top: 7px; width: 100%; height: 293px; background-image: url('Screenshot%202025-04-17%20011312.png')">
+        <div class="card-front" style="background-image: url('passing.jpg');">
+          Passing
+        </div>
+        <div class="card-back">
+          Effective passing builds team play and advances the ball accurately to teammates.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('Screenshot%202025-04-17%20012201.png'); left: 0px; top: 4px; width: 99%; height: 99%;">
+          Shooting
+        </div>
+        <div class="card-back">
+          Learning to shoot accurately increases your scoring chances and impacts the match outcome.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner" style="left: 0px; top: 0px; background-image: url('Screenshot%202025-04-17%20012357.png')">
+        <div class="card-front" style="background-image: url('defending.jpg');">
+          Defending
+        </div>
+        <div class="card-back">
+          Good defending requires positioning, anticipation, and tackling to stop opponents effectively.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner" style="left: 0px; top: 6px; height: 294px; background-image: url('Screenshot%202025-04-17%20012728.png')">
+        <div class="card-front" style="background-image: url('heading.jpg');">
+          Heading
+        </div>
+        <div class="card-back">
+          Heading is key in both attack and defense, especially during set-pieces like corners.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('goalkeeping.jpg');">
+          Goalkeeping
+        </div>
+        <div class="card-back">
+          Goalkeepers require agility, awareness, and courage to stop shots and command their area.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

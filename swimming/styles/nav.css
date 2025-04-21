@@ -1,0 +1,497 @@
+/* Navigation styling for swimming section */
+
+/* Variables for swimming section colors */
+:root {
+    --primary-color: #00AEEF; /* Swimming sky blue */
+    --secondary-color: #0077B6; /* Swimming ocean blue */
+    --accent-color: #FFFFFF; /* White */
+    --bg-color: #E0F7FA; /* Light cyan background */
+    --highlight-color: #03045E; /* Navy deep highlights */
+    --transition: all 0.3s ease;
+    --sports-nav-height: 59px; /* Default value, will be overridden by JS */
+}
+
+/* Sports Navigation Bar */
+.sports-nav {
+    background-color: #f0f8ff;
+    padding: 0.8rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* At the top */
+    z-index: 100; /* Higher z-index */
+    transition: padding 0.3s ease, background-color 0.3s ease, height 0.3s ease;
+}
+
+/* APUFit logo in sports nav */
+.sports-nav .nav-logo {
+    position: relative;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: opacity 0.4s ease, transform 0.4s ease, margin 0.4s ease, max-height 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-20px); /* Start from above when appearing */
+}
+
+.sports-nav .nav-logo a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: block;
+}
+
+/* Sports nav scrolled state */
+.sports-nav.scrolled {
+    padding: 0.6rem 0;
+    background-color: rgba(240, 248, 255, 0.98);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.sports-nav.scrolled .nav-logo {
+    opacity: 1;
+    visibility: visible;
+    max-height: 30px; /* Give enough space for logo content */
+    margin-bottom: 0.5rem;
+    transform: translateY(0); /* Move to normal position when visible */
+}
+
+/* Add class for disappearing animation */
+.sports-nav .nav-logo.disappearing {
+    opacity: 0;
+    transform: translateY(20px); /* Move down when disappearing */
+    max-height: 0;
+    margin-bottom: 0;
+}
+
+.sports-nav-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sports-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sports-nav ul li {
+    margin: 0;
+}
+
+.sport-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    color: #3498db;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.sport-button:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Swimming-specific sport button */
+.sport-button.swimming-active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sport-button i {
+    font-size: 1rem;
+}
+
+/* Main Navigation */
+nav:not(.sports-nav) {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--sports-nav-height);
+    z-index: 99;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: top 0.2s ease;
+}
+
+nav:not(.sports-nav) ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav:not(.sports-nav) ul li {
+    margin: 0 15px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav:not(.sports-nav) ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.5rem 1rem;
+    border-radius: 32px;
+    transition: var(--transition);
+    position: relative;
+}
+
+nav:not(.sports-nav) ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav:not(.sports-nav) ul li a:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Back to APUFit Button */
+.back-to-apufit {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+}
+
+.apufit-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(to right, var(--highlight-color), var(--primary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.apufit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.apufit-button i {
+    margin-right: 8px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 101;
+    }
+    
+    nav:not(.sports-nav) {
+        position: relative;
+        top: 0;
+    }
+    
+    nav:not(.sports-nav) ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--secondary-color);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    
+    nav:not(.sports-nav) ul.active {
+        display: block;
+        max-height: 300px;
+        opacity: 1;
+        padding: 0.8rem 0;
+    }
+    
+    nav:not(.sports-nav) ul li {
+        margin: 0.5rem 2rem;
+        text-align: left;
+        width: calc(100% - 4rem);
+    }
+    
+    nav:not(.sports-nav) ul li a {
+        display: block;
+        width: 100%;
+    }
+    
+    /* Sports navigation on mobile */
+    .sports-nav {
+        padding: 0.8rem 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .sports-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.8rem;
+        align-items: center;
+    }
+    
+    .sports-nav ul li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .sport-button {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        padding: 0.6rem 0.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .sports-nav.scrolled {
+        padding: 0.8rem 0;
+    }
+    
+    .sports-nav.scrolled .nav-logo {
+        max-height: 25px;
+        margin-bottom: 0.6rem;
+    }
+    
+    .sports-nav .nav-logo {
+        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Make sure title is visible on small screens */
+    .sports-nav-title {
+        display: block;
+        margin-bottom: 0.8rem;
+        padding: 0 1rem;
+    }
+    
+    /* Make sure the back to APUFit button remains visible */
+    .back-to-apufit {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .apufit-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Styles for the mobile menu toggle button */
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        color: var(--primary);
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    
+    /* Ensure the nav is properly positioned */
+    nav:not(.sports-nav) {
+        padding: 0.8rem 0;
+        position: sticky;
+    }
+    
+    /* Animation for the menu items */
+    nav:not(.sports-nav) ul li {
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition-delay: calc(0.05s * var(--i, 1));
+    }
+    
+    nav:not(.sports-nav) ul.active li {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    /* Keep main nav horizontally aligned with wrapping */
+    nav:not(.sports-nav) ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    nav:not(.sports-nav) ul li {
+        margin: 0.3rem;
+    }
+    
+    nav:not(.sports-nav) ul li a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        display: block;
+    }
+}
+
+/* Even smaller screens - Stack sports nav buttons vertically */
+@media (max-width: 480px) {
+    .sports-nav ul {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        width: 90%;
+    }
+    
+    .sports-nav-title {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    /* Make buttons slightly larger on single column */
+    .sport-button {
+        padding: 0.7rem 1rem;
+    }
+}
+
+/* Main navigation mobile adjustments */
+@media (max-width: 768px) {
+    nav:not(.sports-nav) {
+        padding: 0.5rem 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 101;
+        background: none;
+        border: none;
+        color: var(--primary);
+    }
+    
+    nav:not(.sports-nav) ul {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        transition: all 0.3s ease;
+    }
+    
+    nav:not(.sports-nav) ul.active {
+        max-height: 300px; /* Large enough to fit content */
+        opacity: 1;
+        padding: 0.8rem 0;
+    }
+    
+    nav:not(.sports-nav) ul li {
+        margin: 0.3rem;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.3s ease;
+        transition-delay: calc(var(--i) * 0.1s);
+    }
+    
+    nav:not(.sports-nav) ul.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Improved appearance of active navigation items */
+nav ul li a.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+/* Transition for mobile menu toggle */
+.mobile-menu-toggle {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-toggle:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Ensure proper sticky positioning for both navs */
+.sports-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav:not(.sports-nav) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--sports-nav-height); /* Variable set by JS */
+    z-index: 99;
+}

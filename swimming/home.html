@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APUFit Swimming - Asia Pacific University</title>
+    <title>Swimming - APUFit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/swimming.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
@@ -14,16 +17,30 @@
         <p>Swimming Division @ APUFit</p>
     </header>
 
+    <!-- Sports Navigation Bar -->
+    <nav class="sports-nav">
+        <div class="nav-logo">
+            <a href="../index.html">APUFit</a>
+        </div>
+        <div class="sports-nav-title">Our Sports</div>
+        <ul>
+            <li><a href="../basketball/index.html" class="sport-button"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+            <li><a href="../football/default.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
+            <li><a href="../badminton/index.html" class="sport-button"><i class="fas fa-shuttlecock"></i> Badminton</a></li>
+            <li><a href="home.html" class="sport-button" style="background-color: var(--primary-color); color: white;"><i class="fas fa-swimmer"></i> Swimming</a></li>
+        </ul>
+    </nav>
+
     <nav>
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="swimming.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="join-us.html">Join Us</a></li>
+            <li style="--i: 1;"><a href="home.html" class="active">Home</a></li>
+            <li style="--i: 2;"><a href="swimming.html">About</a></li>
+            <li style="--i: 3;"><a href="team.html">Team</a></li>
+            <li style="--i: 4;"><a href="schedule.html">Schedule</a></li>
+            <li style="--i: 5;"><a href="join-us.html">Join Us</a></li>
         </ul>
     </nav>
 
@@ -33,31 +50,89 @@
             <h1>APUFit Swimming Division</h1>
             <p>Welcome to the official page of APU Swimming Division</p>
             <p>Join our vibrant swimming community at Asia Pacific University. Dive in, train, compete, and make waves with fellow swimming enthusiasts.</p>
-            <a href="join-us.html" class="cta-button">Join Our Team</a>
+            <div class="hero-cta">
+                <a href="join-us.html" class="cta-button">Join Our Team</a>
+                <a href="swimming.html" class="cta-button" style="background-color: transparent; border: 2px solid white;">Learn More</a>
+            </div>
         </div>
     </div>
 
-    <div class="features">
-        <div class="feature">
-            <i class="fas fa-swimmer"></i>
-            <h2>Weekly Training Sessions</h2>
-            <p>Enhance your swimming skills with structured training sessions guided by professional coaches.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-medal"></i>
-            <h2>Competitions</h2>
-            <p>Represent APU in intercollegiate swimming meets, tournaments, and exciting events throughout the year.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-water"></i>
-            <h2>Aquatic Community</h2>
-            <p>Be part of a supportive and energetic swimming community for all levels — from beginners to pros.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <h2>Skill Development</h2>
-            <p>Improve your techniques, strokes, endurance, and race strategies through focused coaching programs.</p>
-        </div>
+    <div class="container">
+        <section class="overview-section">
+            <h2>Welcome to APUFit Swimming</h2>
+            <p>Your journey to aquatic mastery starts here! Our swimming division provides professional coaching, state-of-the-art facilities, and a supportive community to help you excel in the water.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-swimmer"></i>
+                    <h2>Weekly Training Sessions</h2>
+                    <p>Enhance your swimming skills with structured training sessions guided by professional coaches.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-medal"></i>
+                    <h2>Competitions</h2>
+                    <p>Represent APU in intercollegiate swimming meets, tournaments, and exciting events throughout the year.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-water"></i>
+                    <h2>Aquatic Community</h2>
+                    <p>Be part of a supportive and energetic swimming community for all levels — from beginners to pros.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h2>Skill Development</h2>
+                    <p>Improve your techniques, strokes, endurance, and race strategies through focused coaching programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="upcoming-events-section">
+            <h2 class="h2-left">Upcoming Events</h2>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">APR</span>
+                        <span class="day">25</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Swimming Time Trials</h3>
+                        <p class="event-meta"><i class="fas fa-map-marker-alt"></i> APU Swimming Pool</p>
+                        <p class="event-meta"><i class="fas fa-clock"></i> 3:00 PM - 6:00 PM</p>
+                        <p>Open to all team members and prospective swimmers. Improve your personal bests!</p>
+                        <a href="schedule.html" class="cta-button small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">MAY</span>
+                        <span class="day">10</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Stroke Technique Workshop</h3>
+                        <p class="event-meta"><i class="fas fa-map-marker-alt"></i> APU Swimming Pool</p>
+                        <p class="event-meta"><i class="fas fa-clock"></i> 4:00 PM - 6:00 PM</p>
+                        <p>Master the perfect butterfly and breaststroke with our expert coaches.</p>
+                        <a href="schedule.html" class="cta-button small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">MAY</span>
+                        <span class="day">18</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Inter-University Swim Meet</h3>
+                        <p class="event-meta"><i class="fas fa-map-marker-alt"></i> National Aquatics Center</p>
+                        <p class="event-meta"><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</p>
+                        <p>Our team will compete against other universities in this prestigious competition.</p>
+                        <a href="schedule.html" class="cta-button small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Back to APUFit Button - Fixed Position -->
@@ -83,32 +158,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle functionality
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.querySelector('nav ul');
-
-        if (mobileMenuToggle && mainNav) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mainNav.classList.toggle('active');
-
-                // Toggle aria-expanded attribute for accessibility
-                const expanded = mainNav.classList.contains('active');
-                mobileMenuToggle.setAttribute('aria-expanded', expanded);
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('nav') && mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-
-            // Set initial state
-            mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            mobileMenuToggle.setAttribute('aria-label', 'Toggle navigation menu');
-        }
-    </script>
+    <!-- Use only the external nav.js file for navigation functionality -->
+    <script src="js/nav.js"></script>
 </body>
 </html>

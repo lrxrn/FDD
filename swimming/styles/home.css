@@ -4,6 +4,7 @@
     --accent-color: #FFFFFF; /* White */
     --bg-color: #E0F7FA; /* Light cyan background */
     --highlight-color: #03045E; /* Navy deep highlights */
+    --transition: all 0.3s ease;
 }
 
 body {
@@ -141,7 +142,7 @@ nav ul li a:hover::after {
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         z-index: 100;
     }
-    
+    x
     nav ul.active {
         display: block;
         max-height: 300px;
@@ -170,32 +171,11 @@ nav ul li a:hover::after {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    
-    /* Responsive adjustments for features */
-    .features {
-        padding: 30px 10px;
-    }
-    
-    .feature {
-        width: 100%;
-        max-width: 300px;
-        margin: 15px auto;
-    }
-    
-    /* Make hero section more responsive */
-    .hero {
-        height: 400px;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
 }
 
+/* Styles specific to home.html for the swimming section */
+
+/* Hero Banner */
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../images/swimming-banner.jpg');
     background-size: cover;
@@ -204,55 +184,63 @@ nav ul li a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-color);
-    text-align: center;
     position: relative;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
 }
 
 .hero-content {
     max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
     position: relative;
     z-index: 2;
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: var(--highlight-color);
-    color: var(--accent-color);
-    padding: 12px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.cta-button:hover {
-    background-color: #C0392B; /* Darker red */
-}
-
-.features {
+.hero-cta {
     display: flex;
+    justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 50px 20px;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature {
-    width: 300px;
-    text-align: center;
-    margin: 20px;
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--primary-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .feature:hover {
@@ -260,9 +248,61 @@ nav ul li a:hover::after {
 }
 
 .feature i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 15px;
+    margin-bottom: 1.2rem;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.feature h2:after {
+    display: none; /* Remove the underline from feature headings */
+}
+
+.feature p {
+    color: #666;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero {
+        height: 400px;
+        padding: 3rem 1rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.8rem 1rem;
+    }
+    
+    .feature i {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero {
+        height: 550px;
+        padding: 7rem 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
 }
 
 footer {
@@ -443,4 +483,113 @@ nav ul li:last-child {
 
 .apufit-button i {
     margin-right: 8px;
+}
+
+/* Events section styling */
+.upcoming-events-section {
+    margin: 4rem 0;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.event-date .month {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-date .day {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 0.3rem;
+}
+
+.event-details {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.event-details h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.event-meta {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-meta i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.cta-button.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .event-card {
+        flex-direction: row;
+    }
+    
+    .event-date {
+        min-width: 100px;
+    }
+}
+
+/* Fix container styling */
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Fix section heading styling */
+.h2-left {
+    text-align: left;
+}
+
+.h2-left:after {
+    left: 0;
+    transform: none;
 }

@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swimming Trainings - APUFit Swimming</title>
+    <title>Schedule - APUFit Swimming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="styles/swimming.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/schedule.css">
 </head>
 <body>
@@ -15,16 +17,30 @@
         <p>Swimming Division @ APUFit</p>
     </header>
 
+    <!-- Sports Navigation Bar -->
+    <nav class="sports-nav">
+        <div class="nav-logo">
+            <a href="../index.html">APUFit</a>
+        </div>
+        <div class="sports-nav-title">Our Sports</div>
+        <ul>
+            <li><a href="../basketball/index.html" class="sport-button"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+            <li><a href="../football/default.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
+            <li><a href="../badminton/index.html" class="sport-button"><i class="fas fa-shuttlecock"></i> Badminton</a></li>
+            <li><a href="home.html" class="sport-button" style="background-color: var(--primary-color); color: white;"><i class="fas fa-swimmer"></i> Swimming</a></li>
+        </ul>
+    </nav>
+
     <nav>
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="swimming.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="join-us.html">Join Us</a></li>
+            <li style="--i: 1;"><a href="home.html">Home</a></li>
+            <li style="--i: 2;"><a href="swimming.html">About</a></li>
+            <li style="--i: 3;"><a href="team.html">Team</a></li>
+            <li style="--i: 4;"><a href="schedule.html" class="active">Schedule</a></li>
+            <li style="--i: 5;"><a href="join-us.html">Join Us</a></li>
         </ul>
     </nav>
 
@@ -36,8 +52,8 @@
         </div>
     </section>
 
-    <section id="training-schedule" class="training-section">
-        <div class="container">
+    <div class="container">
+        <section id="training-schedule" class="training-section">
             <h2><i class="fas fa-calendar-alt"></i> Weekly Training Schedule</h2>
             <div class="schedule-table">
                 <div class="schedule-row header">
@@ -76,11 +92,9 @@
                     <div class="coach">All Coaches</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="calendar" class="training-section">
-        <div class="container">
+        <section id="calendar" class="training-section">
             <h2><i class="fas fa-calendar"></i> Event Schedule</h2>
             <div class="calendar-container">
                 <div class="calendar-header">
@@ -134,11 +148,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="training-programs" class="training-section">
-        <div class="container">
+        <section id="training-programs" class="training-section">
             <h2><i class="fas fa-swimmer"></i> Our Training Programs</h2>
             <div class="program-cards">
                 <div class="program-card">
@@ -181,11 +193,9 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="registration" class="training-section">
-        <div class="container">
+        <section id="registration" class="training-section">
             <h2><i class="fas fa-clipboard-list"></i> How to Join</h2>
             <div class="registration-info">
                 <div class="registration-steps">
@@ -219,11 +229,11 @@
                     </div>
                 </div>
                 <div class="cta-container">
-                    <a href="#" class="cta-button">Register Now</a>
+                    <a href="join-us.html" class="cta-button">Register Now</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Back to APUFit Button - Fixed Position -->
     <div class="back-to-apufit">
@@ -246,6 +256,7 @@
         </div>
     </footer>
 
-    <script src="js/trainings.js"></script>
+    <!-- Use only the external nav.js file for navigation functionality -->
+    <script src="js/nav.js"></script>
 </body>
 </html>

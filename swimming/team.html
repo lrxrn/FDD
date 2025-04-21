@@ -6,7 +6,9 @@
     <title>Our Team - APUFit Swimming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="styles/swimming.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/team.css">
 </head>
 <body>
@@ -15,193 +17,209 @@
         <p>Swimming Division @ APUFit</p>
     </header>
 
+    <!-- Sports Navigation Bar -->
+    <nav class="sports-nav">
+        <div class="nav-logo">
+            <a href="../index.html">APUFit</a>
+        </div>
+        <div class="sports-nav-title">Our Sports</div>
+        <ul>
+            <li><a href="../basketball/index.html" class="sport-button"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+            <li><a href="../football/default.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
+            <li><a href="../badminton/index.html" class="sport-button"><i class="fas fa-shuttlecock"></i> Badminton</a></li>
+            <li><a href="home.html" class="sport-button" style="background-color: var(--primary-color); color: white;"><i class="fas fa-swimmer"></i> Swimming</a></li>
+        </ul>
+    </nav>
+
     <nav>
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="swimming.html">About</a></li>
-            <li><a href="team.html" class="active">Team</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="join-us.html">Join Us</a></li>
+            <li style="--i: 1;"><a href="home.html">Home</a></li>
+            <li style="--i: 2;"><a href="swimming.html">About</a></li>
+            <li style="--i: 3;"><a href="team.html" class="active">Team</a></li>
+            <li style="--i: 4;"><a href="schedule.html">Schedule</a></li>
+            <li style="--i: 5;"><a href="join-us.html">Join Us</a></li>
         </ul>
     </nav>
 
-    <div class="team-section">
-        <h1>Our Swimming Team</h1>
+    <div class="container">
+        <div class="team-section">
+            <h1>Our Swimming Team</h1>
 
-        <div class="team-intro">
-            <p>Meet the passionate swimmers who represent APUFit Swimming in competitions and events. Our team comprises dedicated students from diverse backgrounds who share a love for the water and competitive spirit.</p>
-        </div>
+            <div class="team-intro">
+                <p>Meet the passionate swimmers who represent APUFit Swimming in competitions and events. Our team comprises dedicated students from diverse backgrounds who share a love for the water and competitive spirit.</p>
+            </div>
 
-        <div class="team-categories">
-            <h2>Men's Team</h2>
-            <div class="team-members">
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-men1.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Ethan Lim</h3>
-                        <p class="position">Freestyle Sprinter</p>
-                        <p class="program">Computer Science, Year 3</p>
-                        <p class="quote">"Every lap sharpens my focus."</p>
+            <div class="team-categories">
+                <h2>Men's Team</h2>
+                <div class="team-members">
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-men1.jpg" alt="Ethan Lim"></div>
+                        <div class="member-info">
+                            <h3>Ethan Lim</h3>
+                            <p class="position">Freestyle Sprinter</p>
+                            <p class="program">Computer Science, Year 3</p>
+                            <p class="quote">"Every lap sharpens my focus."</p>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-men2.jpg" alt="Samuel Tan"></div>
+                        <div class="member-info">
+                            <h3>Samuel Tan</h3>
+                            <p class="position">Butterfly Specialist</p>
+                            <p class="program">Finance, Year 2</p>
+                            <p class="quote">"Butterfly is where power meets grace."</p>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-men3.jpg" alt="Naveen Raj"></div>
+                        <div class="member-info">
+                            <h3>Naveen Raj</h3>
+                            <p class="position">Breaststroke Swimmer</p>
+                            <p class="program">Engineering, Year 4</p>
+                            <p class="quote">"The water calms the chaos of life."</p>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-men4.jpg" alt="Lucas Wong"></div>
+                        <div class="member-info">
+                            <h3>Lucas Wong</h3>
+                            <p class="position">Backstroke Specialist</p>
+                            <p class="program">Software Engineering, Year 3</p>
+                            <p class="quote">"The water teaches resilience."</p>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-men5.jpg" alt="Ryan Ho"></div>
+                        <div class="member-info">
+                            <h3>Ryan Ho</h3>
+                            <p class="position">Distance Freestyler</p>
+                            <p class="program">Design, Year 2</p>
+                            <p class="quote">"Distance swims fuel my creativity."</p>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-men6.jpg" alt="Daniel Foo"></div>
+                        <div class="member-info">
+                            <h3>Daniel Foo</h3>
+                            <p class="position">Individual Medley</p>
+                            <p class="program">Mechanical Engineering, Year 3</p>
+                            <p class="quote">"Mastering every stroke shapes character."</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-men2.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Samuel Tan</h3>
-                        <p class="position">Butterfly Specialist</p>
-                        <p class="program">Finance, Year 2</p>
-                        <p class="quote">"Butterfly is where power meets grace."</p>
+                <h2>Women's Team</h2>
+                <div class="team-members">
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-women1.jpg" alt="Emma Chen"></div>
+                        <div class="member-info">
+                            <h3>Emma Chen</h3>
+                            <p class="position">Freestyle Sprinter</p>
+                            <p class="program">Psychology, Year 3</p>
+                            <p class="quote">"Strength starts in the mind."</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-men3.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Naveen Raj</h3>
-                        <p class="position">Breaststroke Swimmer</p>
-                        <p class="program">Engineering, Year 4</p>
-                        <p class="quote">"The water calms the chaos of life."</p>
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-women2.jpg" alt="Leah Wong"></div>
+                        <div class="member-info">
+                            <h3>Leah Wong</h3>
+                            <p class="position">Butterfly Specialist</p>
+                            <p class="program">Accounting, Year 2</p>
+                            <p class="quote">"Precision is everything, in life and swimming."</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-men4.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Lucas Wong</h3>
-                        <p class="position">Backstroke Specialist</p>
-                        <p class="program">Software Engineering, Year 3</p>
-                        <p class="quote">"The water teaches resilience."</p>
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-women3.jpg" alt="Alicia Tan"></div>
+                        <div class="member-info">
+                            <h3>Alicia Tan</h3>
+                            <p class="position">Breaststroke Swimmer</p>
+                            <p class="program">Medicine, Year 4</p>
+                            <p class="quote">"Swimming gives me peace amidst the rush."</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-men5.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Ryan Ho</h3>
-                        <p class="position">Distance Freestyler</p>
-                        <p class="program">Design, Year 2</p>
-                        <p class="quote">"Distance swims fuel my creativity."</p>
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-women4.jpg" alt="Sophie Lim"></div>
+                        <div class="member-info">
+                            <h3>Sophie Lim</h3>
+                            <p class="position">Backstroke Specialist</p>
+                            <p class="program">Marketing, Year 3</p>
+                            <p class="quote">"Every stroke writes my story."</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-men6.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Daniel Foo</h3>
-                        <p class="position">Individual Medley</p>
-                        <p class="program">Mechanical Engineering, Year 3</p>
-                        <p class="quote">"Mastering every stroke shapes character."</p>
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-women5.jpg" alt="Amira Yusof"></div>
+                        <div class="member-info">
+                            <h3>Amira Yusof</h3>
+                            <p class="position">Distance Freestyler</p>
+                            <p class="program">International Relations, Year 2</p>
+                            <p class="quote">"Long swims give me clarity and strength."</p>
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-photo"><img src="../images/swimming-women6.jpg" alt="Nadia Rahman"></div>
+                        <div class="member-info">
+                            <h3>Nadia Rahman</h3>
+                            <p class="position">Individual Medley</p>
+                            <p class="program">Biomedical Science, Year 3</p>
+                            <p class="quote">"Diversity in strokes mirrors life's variety."</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h2>Women's Team</h2>
-            <div class="team-members">
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-women1.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Emma Chen</h3>
-                        <p class="position">Freestyle Sprinter</p>
-                        <p class="program">Psychology, Year 3</p>
-                        <p class="quote">"Strength starts in the mind."</p>
+            <div class="team-achievements">
+                <h2>Recent Team Achievements</h2>
+                <div class="achievements-list">
+                    <div class="achievement">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-detail">
+                            <h3>APUFit Invitational Swim Challenge</h3>
+                            <p>Champions (2025)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-women2.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Leah Wong</h3>
-                        <p class="position">Butterfly Specialist</p>
-                        <p class="program">Accounting, Year 2</p>
-                        <p class="quote">"Precision is everything, in life and swimming."</p>
+                    <div class="achievement">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-detail">
+                            <h3>National Intervarsity Swim Meet</h3>
+                            <p>2nd Place (2024)</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-women3.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Alicia Tan</h3>
-                        <p class="position">Breaststroke Swimmer</p>
-                        <p class="program">Medicine, Year 4</p>
-                        <p class="quote">"Swimming gives me peace amidst the rush."</p>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-women4.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Sophie Lim</h3>
-                        <p class="position">Backstroke Specialist</p>
-                        <p class="program">Marketing, Year 3</p>
-                        <p class="quote">"Every stroke writes my story."</p>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-women5.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Amira Yusof</h3>
-                        <p class="position">Distance Freestyler</p>
-                        <p class="program">International Relations, Year 2</p>
-                        <p class="quote">"Long swims give me clarity and strength."</p>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div class="member-photo"><img src="../images/swimming-women6.jpg" alt="Team Member"></div>
-                    <div class="member-info">
-                        <h3>Nadia Rahman</h3>
-                        <p class="position">Individual Medley</p>
-                        <p class="program">Biomedical Science, Year 3</p>
-                        <p class="quote">"Diversity in strokes mirrors life's variety."</p>
+                    <div class="achievement">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="achievement-detail">
+                            <h3>SEA University Aquatics Cup</h3>
+                            <p>Finalists (2023)</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="team-achievements">
-            <h2>Recent Team Achievements</h2>
-            <div class="achievements-list">
-                <div class="achievement">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="achievement-detail">
-                        <h3>APUFit Invitational Swim Challenge</h3>
-                        <p>Champions (2025)</p>
-                    </div>
-                </div>
-
-                <div class="achievement">
-                    <div class="achievement-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <div class="achievement-detail">
-                        <h3>National Intervarsity Swim Meet</h3>
-                        <p>2nd Place (2024)</p>
-                    </div>
-                </div>
-
-                <div class="achievement">
-                    <div class="achievement-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="achievement-detail">
-                        <h3>SEA University Aquatics Cup</h3>
-                        <p>Finalists (2023)</p>
-                    </div>
-                </div>
+            <div class="join-team">
+                <h2>Join Our Team</h2>
+                <p>Interested in diving into the APUFit Swimming Team? We hold tryouts at the start of each month — all levels are welcome!</p>
+                <a href="join-us.html" class="cta-button">Learn About Tryouts</a>
             </div>
-        </div>
-
-        <div class="join-team">
-            <h2>Join Our Team</h2>
-            <p>Interested in diving into the APUFit Swimming Team? We hold tryouts at the start of each month — all levels are welcome!</p>
-            <a href="join-us.html" class="cta-button">Learn About Tryouts</a>
         </div>
     </div>
 
@@ -225,10 +243,7 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-    </script>
+    <!-- Use only the external nav.js file for navigation functionality -->
+    <script src="js/nav.js"></script>
 </body>
 </html>

@@ -6,7 +6,9 @@
     <title>Join Us - APUFit Swimming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="styles/swimming.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/join-us.css">
 </head>
 <body>
@@ -15,16 +17,30 @@
         <p>Swimming Division @ APUFit</p>
     </header>
 
+    <!-- Sports Navigation Bar -->
+    <nav class="sports-nav">
+        <div class="nav-logo">
+            <a href="../index.html">APUFit</a>
+        </div>
+        <div class="sports-nav-title">Our Sports</div>
+        <ul>
+            <li><a href="../basketball/index.html" class="sport-button"><i class="fas fa-basketball-ball"></i> Basketball</a></li>
+            <li><a href="../football/default.html" class="sport-button"><i class="fas fa-futbol"></i> Football</a></li>
+            <li><a href="../badminton/index.html" class="sport-button"><i class="fas fa-shuttlecock"></i> Badminton</a></li>
+            <li><a href="home.html" class="sport-button" style="background-color: var(--primary-color); color: white;"><i class="fas fa-swimmer"></i> Swimming</a></li>
+        </ul>
+    </nav>
+
     <nav>
         <div class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="swimming.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="join-us.html" class="active">Join Us</a></li>
+            <li style="--i: 1;"><a href="home.html">Home</a></li>
+            <li style="--i: 2;"><a href="swimming.html">About</a></li>
+            <li style="--i: 3;"><a href="team.html">Team</a></li>
+            <li style="--i: 4;"><a href="schedule.html">Schedule</a></li>
+            <li style="--i: 5;"><a href="join-us.html" class="active">Join Us</a></li>
         </ul>
     </nav>
 
@@ -244,12 +260,8 @@
         </div>
     </footer>
 
+    <!-- Use the external js files for functionality -->
     <script src="js/join-us.js"></script>
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-    </script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
