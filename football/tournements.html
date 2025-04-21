@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Club Cup</title>
   <style>
     body {
@@ -14,13 +14,13 @@
 	background-image: url('Screenshot 2025-04-20 223859.png');
 }
     header {
-	background-color: rgba(0, 0, 128, 0.8);
-	padding: 20px;
-	text-align: center;
-	font-size: 2.5rem;
-	font-weight: bold;
-	color: #ffdf00;
-}
+      background-color: rgba(0, 0, 128, 0.8);
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffdf00;
+    }
     nav {
       background-color: rgba(0, 0, 50, 0.9);
       display: flex;
@@ -35,14 +35,12 @@
       font-size: 1.1rem;
     }
     .container {
-	background-position: center;
-	max-width: 1000px;
-	margin: 30px auto;
-	background-color: rgba(0, 0, 0, 0.7);
-	padding: 25px;
-	border-radius: 12px;
-	background-repeat: no-repeat;
-}
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 25px;
+      border-radius: 12px;
+    }
     .cup-info {
       margin-bottom: 25px;
     }
@@ -69,6 +67,59 @@
     .match p, .trophy p {
       margin: 5px 0;
     }
+
+    .form-section {
+      margin-top: 40px;
+    }
+
+    .form-section h2 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    input[type=text], input[type=submit] {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    input[type=text] {
+      width: 60%;
+    }
+
+    input[type=submit] {
+      background-color: #ffcc00;
+      color: #000;
+      cursor: pointer;
+      width: 200px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    table th {
+      background-color: rgba(255, 215, 0, 0.3);
+      color: #ffdf00;
+    }
   </style>
 </head>
 <body>
@@ -78,8 +129,7 @@
   <nav>
       <a href="default.html">Home</a> <a href="events.html">Events</a>
 	  <a href="training.html">Training</a> <a href="tournements.html">Cup</a>
-	  <a href="history.html">History</a>
-    <a href="aboutus.html">About Us</a>
+	  <a href="history.html">History</a> <a href="aboutus.html">About Us</a>
   </nav>
 
   <div class="container">
@@ -117,6 +167,48 @@
         <p><strong>Final Match:</strong> Won on penalties (5-4)</p>
       </div>
     </div>
+
+    <div class="form-section">
+      <h2>📝 Register a New Team</h2>
+      <form action="#">
+        <input type="text" placeholder="Team Name" required>
+        <input type="text" placeholder="Coach Name" required>
+        <input type="submit" value="Register Team">
+      </form>
+
+      <h2>📋 Registered Teams</h2>
+      <table>
+        <tr>
+          <th>Team Name</th>
+          <th>Coach Name</th>
+        </tr>
+        <tr>
+          <td>Real Madrid</td>
+          <td>Carlo Ancelotti</td>
+        </tr>
+        <tr>
+          <td>FC Barcelona</td>
+          <td>Xavi Hernandez</td>
+        </tr>
+        <tr>
+          <td>Storm Warriors</td>
+          <td>Jake Peterson</td>
+        </tr>
+        <tr>
+          <td>Mountain Eagles</td>
+          <td>Luis Romero</td>
+        </tr>
+        <tr>
+          <td>Skyline United</td>
+          <td>Sarah Johnson</td>
+        </tr>
+        <tr>
+          <td>Thunder FC</td>
+          <td>Daniel Cho</td>
+        </tr>
+      </table>
+    </div>
+
   </div>
 
 </body>
