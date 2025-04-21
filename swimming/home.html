@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APUFit Swimming - Asia Pacific University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏊‍♂️ APUFit Swimming</div>
+        <p>Swimming Division @ APUFit</p>
+    </header>
+
+    <nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="swimming.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="join-us.html">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="banner-overlay"></div>
+        <div class="hero-content">
+            <h1>APUFit Swimming Division</h1>
+            <p>Welcome to the official page of APU Swimming Division</p>
+            <p>Join our vibrant swimming community at Asia Pacific University. Dive in, train, compete, and make waves with fellow swimming enthusiasts.</p>
+            <a href="join-us.html" class="cta-button">Join Our Team</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <i class="fas fa-swimmer"></i>
+            <h2>Weekly Training Sessions</h2>
+            <p>Enhance your swimming skills with structured training sessions guided by professional coaches.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-medal"></i>
+            <h2>Competitions</h2>
+            <p>Represent APU in intercollegiate swimming meets, tournaments, and exciting events throughout the year.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-water"></i>
+            <h2>Aquatic Community</h2>
+            <p>Be part of a supportive and energetic swimming community for all levels — from beginners to pros.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h2>Skill Development</h2>
+            <p>Improve your techniques, strokes, endurance, and race strategies through focused coaching programs.</p>
+        </div>
+    </div>
+
+    <!-- Back to APUFit Button - Fixed Position -->
+    <div class="back-to-apufit">
+        <a href="../index.html" class="apufit-button">
+            <i class="fas fa-arrow-left"></i> <strong>Back to APUFit</strong>
+        </a>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/APUFitClub" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/APUFitClub" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/APUFitClub" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 APUFit Swimming - Asia Pacific University</p>
+            <div class="footer-buttons">
+                <a href="../contactUs.html" class="contact-button">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('nav ul');
+
+        if (mobileMenuToggle && mainNav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+
+                // Toggle aria-expanded attribute for accessibility
+                const expanded = mainNav.classList.contains('active');
+                mobileMenuToggle.setAttribute('aria-expanded', expanded);
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('nav') && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Set initial state
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+        }
+    </script>
+</body>
+</html>

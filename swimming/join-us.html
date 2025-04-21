@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - APUFit Swimming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/swimming.css">
+    <link rel="stylesheet" href="styles/join-us.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏊‍♂️ APUFit Swimming</div>
+        <p>Swimming Division @ APUFit</p>
+    </header>
+
+    <nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="swimming.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="join-us.html" class="active">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="join-us-section">
+        <h1>Join APUFit Swimming</h1>
+
+        <div class="join-intro">
+            <p>Interested in becoming part of our swimming family? Fill out the form below to express your interest in joining the team or attending our next trial session.</p>
+        </div>
+
+        <div class="application-container">
+            <h2>Swimming Team Application</h2>
+
+            <div class="form-content-wrapper">
+                <div class="form-section">
+                    <div id="form-status" class="hidden"></div>
+
+                    <form id="join-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="academicProgram">Academic Program *</label>
+                            <input type="text" id="academicProgram" name="academicProgram" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="yearOfStudy">Year of Study *</label>
+                            <select id="yearOfStudy" name="yearOfStudy" required>
+                                <option value="">Select Year</option>
+                                <option value="1">Year 1</option>
+                                <option value="2">Year 2</option>
+                                <option value="3">Year 3</option>
+                                <option value="4">Year 4</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Preferred Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="Men's Team">Men's Team</option>
+                                <option value="Women's Team">Women's Team</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialty">Swimming Specialty *</label>
+                            <select id="specialty" name="specialty" required>
+                                <option value="">Select Specialty</option>
+                                <option value="Freestyle">Freestyle</option>
+                                <option value="Breaststroke">Breaststroke</option>
+                                <option value="Backstroke">Backstroke</option>
+                                <option value="Butterfly">Butterfly</option>
+                                <option value="Individual Medley">Individual Medley</option>
+                                <option value="Open Water">Open Water</option>
+                                <option value="Flexible">Flexible / Multiple Styles</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Swimming Experience (years) *</label>
+                            <input type="number" id="experience" name="experience" min="0" max="30" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="previousClubs">Previous Clubs/Teams (if any)</label>
+                            <textarea id="previousClubs" name="previousClubs" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="achievements">Notable Achievements in Swimming</label>
+                            <textarea id="achievements" name="achievements" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="motivation">Why do you want to join our team? *</label>
+                            <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group availability">
+                            <label>Availability for Training *</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="monday" name="availability" value="Monday">
+                                    <label for="monday">Monday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="tuesday" name="availability" value="Tuesday">
+                                    <label for="tuesday">Tuesday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="wednesday" name="availability" value="Wednesday">
+                                    <label for="wednesday">Wednesday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="thursday" name="availability" value="Thursday">
+                                    <label for="thursday">Thursday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="friday" name="availability" value="Friday">
+                                    <label for="friday">Friday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="saturday" name="availability" value="Saturday">
+                                    <label for="saturday">Saturday</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="sunday" name="availability" value="Sunday">
+                                    <label for="sunday">Sunday</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="otherSports">Other Sports/Activities</label>
+                            <input type="text" id="otherSports" name="otherSports">
+                        </div>
+
+                        <div class="form-group agreement">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <label for="agreement">I understand that submitting this form does not guarantee a spot on the team, and I agree to participate in trials if selected.</label>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="reset" class="reset-btn">Reset Form</button>
+                            <button type="submit" class="submit-btn">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tryout-info">
+                    <h2>Trial Information</h2>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Next Trial Dates</h3>
+                            <p>May 15-17, 2025</p>
+                            <p>September 10-12, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Location</h3>
+                            <p>APU Main Sports Complex</p>
+                            <p>Swimming Pool</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>What to Bring</h3>
+                            <ul>
+                                <li>Student ID</li>
+                                <li>Swimming gear</li>
+                                <li>Goggles</li>
+                                <li>Towel</li>
+                                <li>Water bottle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="info-text">
+                            <h3>Questions?</h3>
+                            <p>Email: <a href="mailto:swimming.apufit@apu.edu.my">swimming.apufit@apu.edu.my</a></p>
+                            <p>Coach's Office: Sports Complex, Room 110</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to APUFit Button -->
+    <div class="back-to-apufit">
+        <a href="../index.html" class="apufit-button">
+            <i class="fas fa-arrow-left"></i> <strong>Back to APUFit</strong>
+        </a>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/APUFitClub" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/APUFitClub" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/c/APUFitClub" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 APUFit Swimming - Asia Pacific University</p>
+            <a href="../contactUs.html" class="contact-button">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/join-us.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
