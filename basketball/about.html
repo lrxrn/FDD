@@ -189,10 +189,31 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
-            document.querySelector('.sports-nav ul').classList.toggle('active');
-        });
+        // Mobile menu toggle functionality - now targets main nav from sports nav toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('nav:not(.sports-nav) ul');
+        
+        if (mobileMenuToggle && mainNav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                
+                // Toggle aria-expanded attribute for accessibility
+                const expanded = mainNav.classList.contains('active');
+                mobileMenuToggle.setAttribute('aria-expanded', expanded);
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.mobile-menu-toggle') && !e.target.closest('nav:not(.sports-nav)') && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Set initial state
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+        }
     </script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 /* Join Us Page Styles */
 :root {
+    /* Using the standardized basketball color scheme variables */
+    /* These are already defined in basketball.css but included here for component modularity */
     --primary-color: #FF7F00; /* Basketball orange */
     --secondary-color: #8B4513; /* Basketball brown */
     --accent-color: #FFFFFF; /* White */

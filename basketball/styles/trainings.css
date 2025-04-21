@@ -18,7 +18,7 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
-    color: var(--secondary-color);
+    color: var(--secondary);
     position: relative;
     padding-bottom: 15px;
 }
@@ -28,7 +28,7 @@
     position: absolute;
     width: 60px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -36,7 +36,7 @@
 
 .training-section h2 i {
     margin-right: 10px;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 /* Schedule Table Styles */
@@ -56,7 +56,7 @@
 }
 
 .schedule-row.header {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: white;
     font-weight: 600;
     text-transform: uppercase;
@@ -115,7 +115,7 @@
 }
 
 .program-icon {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -133,7 +133,7 @@
 .program-card h3 {
     text-align: center;
     margin-bottom: 15px;
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 .program-card p {
@@ -154,7 +154,7 @@
 }
 
 .program-features li i {
-    color: var(--primary-color);
+    color: var(--primary);
     margin-right: 10px;
 }
 
@@ -182,7 +182,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: white;
     grid-column: 1 / -1;
     width: 100%;
@@ -252,7 +252,7 @@
 }
 
 .day.today {
-    background-color: var(--highlight-color);
+    background-color: var(--highlight);
     color: white;
     font-weight: bold;
 }
@@ -270,7 +270,7 @@
     transform: translateX(-50%);
     width: 5px;
     height: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     border-radius: 50%;
 }
 
@@ -286,7 +286,7 @@
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 .event {
@@ -303,7 +303,7 @@
 }
 
 .event-date {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: white;
     border-radius: 5px;
     padding: 10px 15px;
@@ -333,7 +333,7 @@
 
 .event-details p i {
     margin-right: 5px;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 /* Responsive Calendar */
@@ -382,7 +382,7 @@
 }
 
 .step-number {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: white;
     width: 50px;
     height: 50px;
@@ -407,7 +407,7 @@
 .step-content h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 .step-content p {
@@ -422,7 +422,7 @@
 
 /* Active nav link */
 nav ul li a.active {
-    color: var(--highlight-color);
+    color: var(--highlight);
 }
 
 nav ul li a.active::after {

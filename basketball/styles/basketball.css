@@ -1,15 +1,17 @@
 :root {
-    --primary: #3498db; /* Main site blue */
-    --secondary: #2ecc71; /* Main site green */
+    /* Main site structure kept for compatibility */
+    --primary: #FF7F00; /* Basketball orange */
+    --secondary: #8B4513; /* Basketball brown */
     --dark: #2c3e50; /* Main site dark */
     --light: #ecf0f1; /* Main site light */
     --accent: #e74c3c; /* Main site accent */
+    --highlight-color: #E74C3C; /* Red highlight for accents */
     --transition: all 0.3s ease;
     --sports-nav-height: 59px; /* Default value, will be overridden by JS */
     
-    /* Keep basketball specific colors for components that need them */
-    --basketball-primary: #FF7F00; /* Basketball orange */
-    --basketball-secondary: #8B4513; /* Basketball brown */
+    /* Alternative naming for consistency with other basketball files */
+    --primary-color: #FF7F00; /* Basketball orange */
+    --secondary-color: #8B4513; /* Basketball brown */
 }
 
 body {

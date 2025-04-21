@@ -8,7 +8,7 @@
 .team-section h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--secondary);
     margin-bottom: 30px;
 }
 
@@ -25,7 +25,7 @@
 .team-categories h2 {
     text-align: center;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--primary);
     margin: 40px 0 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(255, 127, 0, 0.2);
@@ -74,13 +74,13 @@
 }
 
 .member-info h3 {
-    color: var(--secondary-color);
+    color: var(--secondary);
     font-size: 1.4rem;
     margin-bottom: 5px;
 }
 
 .member-info .position {
-    color: var(--primary-color);
+    color: var(--primary);
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -109,7 +109,7 @@
 .team-achievements h2 {
     text-align: center;
     font-size: 2rem;
-    color: var(--secondary-color);
+    color: var(--secondary);
     margin-bottom: 30px;
 }
 
@@ -136,13 +136,13 @@
 }
 
 .achievement-icon {
-    color: var(--highlight-color);
+    color: var(--highlight);
     font-size: 2.5rem;
     margin-right: 15px;
 }
 
 .achievement-detail h3 {
-    color: var(--secondary-color);
+    color: var(--secondary);
     font-size: 1.1rem;
     margin-bottom: 5px;
 }
@@ -163,7 +163,7 @@
 
 .join-team h2 {
     font-size: 2rem;
-    color: var(--secondary-color);
+    color: var(--secondary);
     margin-bottom: 15px;
 }
 
@@ -177,7 +177,7 @@
 
 .cta-button {
     display: inline-block;
-    background-color: var(--highlight-color);
+    background-color: var(--highlight);
     color: white;
     padding: 12px 30px;
     border-radius: 30px;
