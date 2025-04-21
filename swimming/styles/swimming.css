@@ -315,7 +315,7 @@ footer {
 
 /* Page Banner - Moved from trainings.css to apply to all basketball pages */
 .page-banner {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../images/basketball-banner.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../images/swimming-banner.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
